@@ -1,11 +1,10 @@
 ---
-title: Apuntes cursos PUCP
+title: Apuntes PUCP
+lang: es
 ---
 
-## {.tabset}
-
-### 2022-1
-
-<a href="2022-1/algebra-3/index.html">
-  Álgebra 3
-</a>
+```{r setup, include=FALSE}
+library(sass)
+sass(sass_file('styles.scss'), output='styles.css')
+knitr::opts_chunk$set(echo = TRUE)
+```

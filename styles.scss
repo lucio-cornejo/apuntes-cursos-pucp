@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter&family=Lobster&display=swap');
+h1 {
+  font-family: 'Lobster', cursive;
+}
+
+// Customize tabset
+@import url('https://fonts.googleapis.com/css2?family=Comforter&family=Dancing+Script&family=Lobster&display=swap');
+ul[role="tablist"] {
+  li {
+    border: 1px solid black;
+  }
+  a {
+    font-size: 2.5rem;
+    font-family: 'Dancing Script', cursive;
+  }
+}

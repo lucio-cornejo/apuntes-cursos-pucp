@@ -1,0 +1,30 @@
+---
+title: Semestre 2022-1
+lang: es
+---
+
+## {.tabset}
+
+### Topología 
+
+[Libro de apuntes](2022-1/topologia/index.html)
+
+### Álgebra 3
+
+[Libro de apuntes](2022-1/algebra-3/index.html)
+
+### Tópicos de Álgebra
+
+[Libro de apuntes](2022-1/algebra-topics/index.html)
+
+### Matemática Discreta
+
+[Libro de apuntes](2022-1/seminario/index.html)
+
+### Investigación de Operaciones 1
+
+[Libro de apuntes](2022-1/iop1/index.html)
+
+### Investigación de Operaciones 2
+
+[Libro de apuntes](2022-1/iop2/index.html)
