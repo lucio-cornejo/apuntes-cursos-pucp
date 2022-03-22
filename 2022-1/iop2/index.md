@@ -1,5 +1,5 @@
 --- 
-title: "MAT253 - Topología"
+title: "IOP222 - Investigación de Operaciones 2"
 author: "Lucio Cornejo"
 date: "2022-03-22"
 site: bookdown::bookdown_site
@@ -17,5 +17,5 @@ header-includes:
 
 
 
-Apuntes del curso **Topología**,
+Apuntes del curso **Investigación de Operaciones 2**,
 dictado en la _Pontificia Universidad Católica del Perú_.

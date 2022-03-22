@@ -1,6 +1,6 @@
-# 03 - 21
+# Semana 03/21
 
-## Lunes 21
+## Lunes
 
 ### Espacios métricos
 

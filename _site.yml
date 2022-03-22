@@ -4,7 +4,6 @@ date: "Actualización más reciente:  `r format(Sys.time(),'%d / %m / %Y')`"
 output_dir: "."
 navbar:
   title: "Apuntes cursos PUCP"
-  # type: inverse
   left:
     - text: " 2022-1"
       href:  2022-1.html

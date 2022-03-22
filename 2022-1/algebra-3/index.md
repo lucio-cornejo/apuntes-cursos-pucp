@@ -10,7 +10,7 @@ description: |
 biblio-style: apalike
 csl: chicago-fullnote-bibliography.csl
 header-includes:
-  - \AtBeginDocument{\renewcommand{\chaptername}{Semana }}
+  - \AtBeginDocument{\renewcommand{\chaptername}{ }}
 ---
 
 # About {-}
