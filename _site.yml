@@ -1,0 +1,13 @@
+name: "Apuntes cursos PUCP"
+author: "Autor: Lucio Cornejo"
+date: "Actualización más reciente:  `r format(Sys.time(),'%d / %m / %Y')`"
+output_dir: "."
+output:
+  html_document:
+    # css: my-style.css
+    highlight: pygments
+    theme: cosmo #flatly
+    self_contained: false # If it's true, xaringanExtra::embed_xaringan() does not work properly.
+    # includes:
+    #   in_header: icon-of-website.html
+    #   before_body: fontawesome-personal-script.html

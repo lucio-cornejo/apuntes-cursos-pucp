@@ -1,0 +1,75 @@
+p.caption {
+  color: #777;
+  margin-top: 10px;
+}
+
+p code {
+  white-space: inherit;
+}
+
+pre {
+  word-break: normal;
+  word-wrap: normal;
+}
+
+pre code {
+  white-space: inherit;
+}
+
+body {
+  background-color: rgba(100, 200, 200, 0.1);
+}
+
+nav a {
+  font-size: 1.1rem;
+}
+
+main {
+  font-size: 1.25rem;
+}
+
+main h1 {
+  font-size: 2.5rem;
+}
+
+main h2 {
+  font-size: 1.7rem;
+  width: fit-content;
+  padding: 1% 2% 1% 2%;
+  background: rgba(0, 0, 200, 0.1);
+}
+
+main h3 {
+  font-size: 1.45rem;
+  width: fit-content;
+  padding: 1% 2% 1% 2%;
+  background: rgba(0, 0, 200, 0.05);
+}
+
+main h4 {
+  font-size: 1.4rem;
+}
+
+main h5 {
+  font-size: 1.3rem;
+}
+
+main h6 {
+  font-size: 1.25rem;
+}
+
+#toc > ul li a.active {
+  background-color: rgba(0, 0, 200, 0.1);
+}
+
+div.figure p.caption {
+  text-align: center;
+}
+
+#toc > div.book-extra {
+  display: none;
+}
+
+#main-nav div.book-extra i {
+  margin-left: 0.5rem;
+}
