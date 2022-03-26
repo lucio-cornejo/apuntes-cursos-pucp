@@ -1,7 +1,7 @@
 --- 
 title: "IOP224 - Investigación de Operaciones 1"
 author: "Lucio Cornejo"
-date: "2022-03-22"
+date: "2022-03-25"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
