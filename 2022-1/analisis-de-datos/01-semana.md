@@ -11,9 +11,6 @@ irá desarrollando a lo largo del curso.
 - Python y R son complementatios, no
 es que uno sea _mejor_ que el otro.
 
-- Potential project partner:
-[Screenshot](C:/Users/HP/Pictures/Screenshots/Captura%20de%20pantalla%20(2118).png)
-
 - En el curso, usaremos Python en su mayoría,
 pero también se compartirá, después de clase,
 el código análogo ,en R, de lo que trabajemos.

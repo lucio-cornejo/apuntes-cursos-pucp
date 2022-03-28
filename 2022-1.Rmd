@@ -28,3 +28,7 @@ lang: es
 ### Investigación de Operaciones 2
 
 [Libro de apuntes](2022-1/iop2/index.html)
+
+### Análisis de Datos
+
+[Libro de apuntes](2022-1/analisis-de-datos/index.html)
