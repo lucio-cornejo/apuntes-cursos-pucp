@@ -1,7 +1,7 @@
 --- 
 title: "1INF03 - Análisis de Datos"
 author: "Lucio Cornejo"
-date: "2022-03-25"
+date: "2022-03-28"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
@@ -19,3 +19,4 @@ header-includes:
 
 Apuntes del curso **Análisis de Datos**,
 dictado en la _Pontificia Universidad Católica del Perú_.
+
