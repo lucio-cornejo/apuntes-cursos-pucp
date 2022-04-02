@@ -1,7 +1,5 @@
 # Semana 03/21
 
-## Viernes
-
 - Será necesario hacer un grupo con otros
 estudiantes del curso, con quienes se 
 comparta afinidad de investigación, para
@@ -27,13 +25,13 @@ momento de iniciar algún proyecto particular.
     - 11 junio
     - 25 junio
 
-- **Las dirigidas (perhaps a veces pcs) se me**
+- **Las dirigidas (perhaps a veces pcs)**
 **de IOP se me cruzan con todos los labs**,
 **excepto por el primero.** 
 
-### Metodología KDD
+## Metodología KDD
 
-#### ¿Qué es un dato?
+### ¿Qué es un dato?
 
 - El dato es el valor de una
 característica/variable/atributo
@@ -65,7 +63,7 @@ aplicadas, que permite preveer y planificar.
     - La información asociada a un **contexto** y una
      **experiencia** se convierte en conocimiento.
 
-#### Descripción de la metodología KDD
+### Descripción de la metodología KDD
 
 - KDD: Knowledge Discovery in Databases
 
@@ -80,7 +78,7 @@ aplicadas, que permite preveer y planificar.
 no nos dice nada, pero que podría servir para
 generar conocimiento a partir de estos datos.
 
-#### Etapas de la metodología KDD
+### Etapas de la metodología KDD
 
 - Esta metodología nos da pasos para cómo
 convertir **datos** en **conocimiento**.
