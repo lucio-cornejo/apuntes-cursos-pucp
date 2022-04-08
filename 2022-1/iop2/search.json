@@ -1,1 +1,16 @@
-[{"path":"index.html","id":"about","chapter":"About","heading":"About","text":"Apuntes del curso Investigación de Operaciones 2,\ndictado en la Pontificia Universidad Católica del Perú.","code":""},{"path":"semana-0321.html","id":"semana-0321","chapter":" 1 Semana 03/21","heading":" 1 Semana 03/21","text":"","code":""},{"path":"semana-0321.html","id":"martes","chapter":" 1 Semana 03/21","heading":"1.1 Martes","text":"lorem ipsum","code":""}]
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "IOP222 - Investigación de Operaciones 2",
+    "section": "",
+    "text": "Apuntes del curso Investigación de Operaciones 2, dictado en la Pontificia Universidad Católica del Perú."
+  },
+  {
+    "objectID": "semana-01.html",
+    "href": "semana-01.html",
+    "title": "Semana 03/21",
+    "section": "",
+    "text": "lorem ipsum"
+  }
+]

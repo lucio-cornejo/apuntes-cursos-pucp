@@ -1,1 +1,9 @@
-[{"path":"index.html","id":"about","chapter":"About","heading":"About","text":"Apuntes del curso Matemática Discreta,\ndictado en la Pontificia Universidad Católica del Perú.","code":""},{"path":"semana-0321.html","id":"semana-0321","chapter":" 1 Semana 03/21","heading":" 1 Semana 03/21","text":"","code":""},{"path":"semana-0321.html","id":"lunes","chapter":" 1 Semana 03/21","heading":"1.1 Lunes","text":"","code":""},{"path":"semana-0321.html","id":"the-pigeonhole-principle","chapter":" 1 Semana 03/21","heading":"1.1.1 The pigeonhole principle","text":"","code":""}]
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "MAT317 - Matemática Discreta",
+    "section": "",
+    "text": "Apuntes del curso Matemática Discreta, dictado en la Pontificia Universidad Católica del Perú."
+  }
+]
