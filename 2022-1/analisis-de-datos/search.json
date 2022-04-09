@@ -81,7 +81,7 @@
     "href": "semana-03.html#hands-on-step2_entendimiento_de_datos.ipynb",
     "title": "Semana 04/04",
     "section": "Hands-on: step2_entendimiento_de_datos.ipynb",
-    "text": "Hands-on: step2_entendimiento_de_datos.ipynb\n\nUno de los primeros pasos tras cargar la data es verificar que cada columna tenga el tipo de dato que le corresponde. Por ejemplo, variables cuantitativas como float, int, etc.\nTambién hay que omitir duplicados en el dataset.\nAl omitir los datos vacíos, no calcular solo cuántos datos vacíos hay, sino también el porcentaje que representan por columna/variable.\n\n\nMedidas de tendencia central\n\nComparando media y mediana de una misma lista de datos, podemos deducir información sobre la presencia de valores atípicos.\n\n\n\nMedidas de variabilidad\nHasta entendimiento de datos entrará en el laboratorio 1 de mañana."
+    "text": "Hands-on: step2_entendimiento_de_datos.ipynb\n\nUno de los primeros pasos tras cargar la data es verificar que cada columna tenga el tipo de dato que le corresponde. Por ejemplo, variables cuantitativas como float, int, etc.\nTambién hay que omitir duplicados en el dataset.\nAl omitir los datos vacíos, no calcular solo cuántos datos vacíos hay, sino también el porcentaje que representan por columna/variable.\nComparando media y mediana de una misma lista de datos, podemos deducir información sobre la presencia de valores atípicos.\n\nHasta entendimiento de datos entrará en el laboratorio 1 de mañana, el cual será individual. Pero, como alumno libre, no tendré nota calificada.\nEl grupo del proyecto final solo puede ser de 4 personas, máximo."
   },
   {
     "objectID": "laboratorio-01.html",
