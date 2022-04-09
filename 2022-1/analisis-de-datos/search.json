@@ -40,5 +40,61 @@
     "title": "Semana 03/28",
     "section": "Step 1: “Entendimiento del negocio”",
     "text": "Step 1: “Entendimiento del negocio”\n\nDescribir problema o situación a analizar\n\nEl problema debe expresar una relación entre dos o más variables.\nDebe estar formulado claramente, sin ambigüedad, como pregunta.\nDebe implicar la posiblidad de realizar una prueba empírica o una recolección de datos.\n\n\n\nDefinir los objetivos\n\n¿Qué se desea lograr?\n¿Cómo ayudará al negocio?\nPrincipales áreas interesadas\nOtros objetivos a tener en cuenta.\n¿Qué características debe tener para ser considerado factible?\n¿Qué esperan recibir?\n¿Cómo están pensando utilizar el resultado del análisis de datos?\n¿Con cuánto tiempo contamos?\nObjetivos de analisis de datos\n\nTraducir los objetivos del negocio en objetivos para el análisis.\nEstablecer las métricas o criterios de evaluación de resultados, que serán útiles para el negocio.\nDiseñar un Plan de Análisis de Datos , considerando tiempos, hitos de desarrollo, responsables y fechas para presentación de avances.\nValidar cada paso con el negocio.\n\n\n\n\nDelimitar la población de análisis\n\nLa delimitación principal es en espacio y tiempo.\nUso de los siguientes criterios:\n\nCaso retrospectivo:\n\nInclusión: Características que deben reunir las unidades de observación.\nExclusión: Características que deben estar ausentes en las unidades de observación.\n\nCaso prospectivo:\n\nEliminación: Son aquellas características que aparecen una vez que ya han sido selecctionadas las unidades de observación (surgen en la medida que se realiza el análisis)\n\n\n\n\n\nIdentificar recursos necesarios\n\nPersonas\n\nExperto del negocio\nLíder analítico del proyecto\nEquipo especialista de analistas de datos\nEquipo de accesso e ingeniería de datos\n\nDatos\n\nIdentificar fuentes y dueños de los datos\nPreguntar por la calidad de datos por recibir\n\n¿Cómo se recolectaron los datos?\n¿Cómo se guardaron los datos?\n¿Cómo se llenó la tabla de datos?\n\n\nHerramientas\n\nSoftwares disponibles (libres o con licencia)\nEntorno para selección y preprocesamiento\nEntorno para entrenamiento de modelos\nEntorno para despliegue de modelos\n\n\n\n\nIdentificar limitaciones\n\nLimitaciones del negocio\n\nPosibles restricciones de capacidad operativa\nPoder de acción para utilizar los resultados\nNormativas de la institución o empresa\n\nLimitaciones respecto a datos\n\nSi tendremos acceso a todos los datos\n¿Se tendrá acceso a toda la población definida?\n\nAccesso para que el modelo pueda ser usado por los usuarios relevantes\n\n\nLimitaciones respecto al tiempo\n\nRestricciones en el tiempo de análisis\nTiempo para el despliegue del modelo\n\n\n\n\nOutput del paso 1: Ficha técnica del proyecto de análisis de datos\n\nArchivo en Paideia\n\nLas partes role y area no serán necesario llenarlas.\nProblemática\n\nColocar como pregunta, tipo, “¿Se puede blah …?”\n\nImportante plasmar las limitaciones.\nAcciones de negocio con los resultados\n\nCómo van a desplegar el modelo creado"
+  },
+  {
+    "objectID": "semana-03.html",
+    "href": "semana-03.html",
+    "title": "Semana 04/04",
+    "section": "",
+    "text": "Según naturaleza\n\n\nCualitativa (categorías)\nCuantitativa\n\nDiscreta\nContinua\n\n\n\nSegún escala de medida\n\n\nNominal\n\nCualitativa\n\nOrdinal\n\nCualitativa\n\nDe Intervalo\n\nCuantitativa\nSolo existe un zero relativo, cuyo valor no significa ausencia. Simplemente es una referencia dentro de una escala de medida.\nEjemplo: Temperatura\n\nDe razón\n\nCuantitativa\nExiste un cero absoluto que significa ausencia de la unidad."
+  },
+  {
+    "objectID": "semana-03.html#medidas-de-resumen",
+    "href": "semana-03.html#medidas-de-resumen",
+    "title": "Semana 04/04",
+    "section": "Medidas de resumen",
+    "text": "Medidas de resumen\n\n\n\n\n\nMedidas básicas de resumen"
+  },
+  {
+    "objectID": "semana-03.html#tendencia-central",
+    "href": "semana-03.html#tendencia-central",
+    "title": "Semana 04/04",
+    "section": "Tendencia central",
+    "text": "Tendencia central\nLa media trabaja con la magnitud de los elementos. Se le puede entender como un punto de equilibrio de una distribución.\nLa mediana trabaja con la posición de los elementos (ordenados). Esta divide a la variable en dos partes iguales.\nUna variable ordinal podría no tener asociada una mediana, en caso que la cantidad de datos sea par, pues requeriría realizar un promedio entre ambas categorías centrales.\nLa moda no es muy útil para variables continuas, ya que la frecuencia de un único valor está no definida. Incluso para variables discretas la moda no es tan útil, comparado a la media o mediana.\nDebe tenerse cuidado con transformar variables ordinales en numéricas, si es que se desea aprovechar en un cierto modelo, pero no es recomendable.\nModa, es el valor más frecuente de la variable. Pico más alto de la distribución.\n\n\n\n\n\nTendencia central\n\n\n\n\n\nCuantil\n\nDividen al total de observaciones en m partes iguales.\n\\(\\text{ Cuantil}_i = \\frac{i * n}{m}\\)\n\nCuartil\n\nDividen al total de observaciones en 4 partes iguales.\n\\(\\text{ Q}_i = \\frac{i * n}{4}\\)\n\nDecil\n\nDividen al total de observaciones en 10 partes iguales.\n\\(\\text{ D}_i = \\frac{i * n}{10}\\)\n\n\n\nVariabilidad\n\nRango: máximo - mínimo\nRango Intercuartil:\n\n\\(R = Q_3 - Q_1\\)\n\\(R\\) pequeño implica poca dispersión.\nEs la medida de dispersión recomendada cuando la distribución presenta datos atípicos.\n\nVarianza muestral:\n\n\\(S^2 (x) = \\frac{\\sum_{i=1}^{n}\\left( x_i - \\bar{x} \\right)^2}{n-1}\\)\nEs casi como un promedio de distancias.\nEl término \\(n-1\\) es para que la varianza muetral tienda a la varianza poblacional (estimador insesgado).\n\nDesviación estándar muestral\n\n\\(s(x) = \\sqrt{ \\frac{\\displaystyle{\\sum_{i=1}^{n}} \\left( x_i - \\bar{x} \\right)^2}{n-1}}\\)\n\nCoeficiente de variación\n\n\\(CV(x) = \\frac{s(x)}{\\bar{x}}\\)\nCarece de unidades. Está estandarizado, así que se puede emplear para comparar distribuciones con diferentes escalas de medida.\nMenor coeficiente de variación implica mayor homogeneidad.\nEste valor está sesgado cuando existen valores atípicos en la data. En ese caso, se debe hace un tratamiento especial para los datos atípicos; no basta con usar algo como \\(IQR(x) \\over median(x)\\)\n\n\n\n\nCuando la distribución no presenta valores atípicos (o tiene muy pocos (percentage wise)), y es símetrica, se recomiendan como medidas de resumen la media, varianza y desviación estándar.\nCuando la distribución presenta datos atípicos, y es asimétrica, se recomiendan como medidas de resumen la mediana y el rango intercuartil.\n\n\n\n\nAsimetría\n\nTrata sobre la deformación horizontal.\nCoeficiente de asimetría (AS)\n\nAsimetría negativa: \\(AS < 0\\)\n\nCola jalada hacia la izquierda.\n\nSimétrica: \\(AS = 0\\)\nAsimetría positiva: \\(AS > 0\\)\n\nCola jalada hacia la derecha.\n\n\n\n\n\n\n\n\nAsimetría\n\n\n\n\n\n\nCurtosis\n\nTrata sobre deformación vertical.\nNo hay límite establecido, solo referencias, para saber qué tipo de curtosis está presente.\nMayor coeficiente de curtosis implica mayor deformación vertical.\n\n\n\n\n\n\nCurtosis\n\n\n\n\n\n\n\n\n\nTipos de curtosis\n\n\n\n\nLa curtosis mesocúrtica hace referencia a cuando la distribución se asemeja a la normal.\n\nEn general, cuando vamos a presentar estadísticas, estas deben estar acompañadas de su gráfico respectivo."
+  },
+  {
+    "objectID": "semana-03.html#distribución-marginal",
+    "href": "semana-03.html#distribución-marginal",
+    "title": "Semana 04/04",
+    "section": "Distribución marginal",
+    "text": "Distribución marginal\n\nEl estudio de una variable, no analizándola por casos/categorías."
+  },
+  {
+    "objectID": "semana-03.html#distribución-condicional",
+    "href": "semana-03.html#distribución-condicional",
+    "title": "Semana 04/04",
+    "section": "Distribución condicional",
+    "text": "Distribución condicional\n\nAnálisis de una variable en función de otras, tratadas como casos/categorías.\nSi una variable \\(X\\) presenta una misma distribución marginal que sus distribuciones condicionales, respecto a una colección \\(Y\\) de categorías, entonces se concluye que estas variables (\\(X\\) e \\(Y\\)) no están relacionadas."
+  },
+  {
+    "objectID": "semana-03.html#hands-on-step2_entendimiento_de_datos.ipynb",
+    "href": "semana-03.html#hands-on-step2_entendimiento_de_datos.ipynb",
+    "title": "Semana 04/04",
+    "section": "Hands-on: step2_entendimiento_de_datos.ipynb",
+    "text": "Hands-on: step2_entendimiento_de_datos.ipynb\n\nUno de los primeros pasos tras cargar la data es verificar que cada columna tenga el tipo de dato que le corresponde. Por ejemplo, variables cuantitativas como float, int, etc.\nTambién hay que omitir duplicados en el dataset.\nAl omitir los datos vacíos, no calcular solo cuántos datos vacíos hay, sino también el porcentaje que representan por columna/variable.\n\n\nMedidas de tendencia central\n\nComparando media y mediana de una misma lista de datos, podemos deducir información sobre la presencia de valores atípicos.\n\n\n\nMedidas de variabilidad\nHasta entendimiento de datos entrará en el laboratorio 1 de mañana."
+  },
+  {
+    "objectID": "laboratorio-01.html",
+    "href": "laboratorio-01.html",
+    "title": "Laboratorio 01",
+    "section": "",
+    "text": "uyuyui"
+  },
+  {
+    "objectID": "python-r-code.html",
+    "href": "python-r-code.html",
+    "title": "Paralelismo Python R",
+    "section": "",
+    "text": "Python\nR\n\n\n\n\ndf.shape\ndim(df)\n\n\ndf.head()\nhead(df)\n\n\ndf.dtypes\nstr(df)\n\n\ndf.nombre_columna\ndf$nombre_columna\n\n\nvariable.astype(variable_type)     x.astype(‘float’)\nas.variable_type(variable)     as.numeric(x)\n\n\ndf.drop_duplicates(inplace=True)\nPENDING\n\n\ndf.dropna(inplace=True)\ndf <- na.omit(df)\n\n\nnumpy.mean(df[“column_name”]\nmean(df[“column_name”])\n\n\ndf[“column_name”].median()\nmedian(df[“column_name”])\n\n\ndf[“column_name”].quantile([0.25, 0.50, 0.75])\nquantile(df[“column_name”], c(0.25, 0.50, 0.75))\n\n\ndf[“column_name”].min()\nmin(df[“column_name”])\n\n\ndf[“column_name”].max()\nmax(df[“column_name”])\n\n\n(df[“column_name”].quantile([0.75])).values - (df[“column_name”].quantile([0.25])).values\nIQR(df[“column_name”]))\n\n\ndf[“column_name”].var()\nvar(df[“column_name”])\n\n\ndf[“column_name”].std()\nsd(df[“column_name”])"
   }
 ]

@@ -3,9 +3,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="quarto-0.9.180">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <meta name="author" content="Lucio Cornejo">
-  <meta name="dcterms.date" content="2022-04-08">
-  <title>1INF03 - Análisis de Datos</title>
+  <title>1INF03 - Análisis de Datos - Paralelismo Python R</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -22,7 +20,8 @@
   <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
   <script src="site_libs/quarto-search/fuse.min.js"></script>
   <script src="site_libs/quarto-search/quarto-search.js"></script>
-  <link href="./semana-01.html" rel="next">
+  <link href="./references.html" rel="next">
+  <link href="./laboratorio-01.html" rel="prev">
   <script src="site_libs/quarto-html/quarto.js"></script>
   <script src="site_libs/quarto-html/popper.min.js"></script>
   <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -62,7 +61,7 @@
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">1INF03 - Análisis de Datos</h1>
+      <h1 class="quarto-secondary-nav-title">Paralelismo Python R</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -92,7 +91,7 @@
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">Descripción</a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Descripción</a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -145,7 +144,7 @@
     <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./python-r-code.html" class="sidebar-item-text sidebar-link">Paralelismo Python R</a>
+  <a href="./python-r-code.html" class="sidebar-item-text sidebar-link active">Paralelismo Python R</a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -159,31 +158,89 @@
     </div>
 </nav>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc">
-<h2 id="toc-title">Tabla de Contenidos</h2>
-<ul>
-<li><a href="#descripción" class="nav-link active" data-scroll-target="#descripción">Descripción</a></li>
-</ul>
-</nav>
-    </div>
+    
 <!-- main -->
-<main class="content column-body" id="quarto-document-content">
+<main class="content column-page-right" id="quarto-document-content">
 <header id="title-block-header" class="quarto-title-block default">
 
+<div class="quarto-title"><h1 class="title d-none d-lg-block display-7">Paralelismo Python R</h1></div></header>
+<table class="table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Python</th>
+<th style="text-align: center;">R</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">df.shape</td>
+<td style="text-align: center;">dim(df)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">df.head()</td>
+<td style="text-align: center;">head(df)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">df.dtypes</td>
+<td style="text-align: center;">str(df)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">df.nombre_columna</td>
+<td style="text-align: center;">df$nombre_columna</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">variable.astype(variable_type) &nbsp;&nbsp;&nbsp; x.astype(‘float’)</td>
+<td style="text-align: center;">as.variable_type(variable) &nbsp;&nbsp;&nbsp; as.numeric(x)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">df.drop_duplicates(inplace=True)</td>
+<td style="text-align: center;">PENDING</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">df.dropna(inplace=True)</td>
+<td style="text-align: center;">df &lt;- na.omit(df)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">numpy.mean(df[“column_name”]</td>
+<td style="text-align: center;">mean(df[“column_name”])</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">df[“column_name”].median()</td>
+<td style="text-align: center;">median(df[“column_name”])</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">df[“column_name”].quantile([0.25, 0.50, 0.75])</td>
+<td style="text-align: center;">quantile(df[“column_name”], c(0.25, 0.50, 0.75))</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">df[“column_name”].min()</td>
+<td style="text-align: center;">min(df[“column_name”])</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">df[“column_name”].max()</td>
+<td style="text-align: center;">max(df[“column_name”])</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">(df[“column_name”].quantile([0.75])).values - (df[“column_name”].quantile([0.25])).values</td>
+<td style="text-align: center;">IQR(df[“column_name”]))</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">df[“column_name”].var()</td>
+<td style="text-align: center;">var(df[“column_name”])</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">df[“column_name”].std()</td>
+<td style="text-align: center;">sd(df[“column_name”])</td>
+</tr>
+</tbody>
+</table>
 
 
-<div class="quarto-title"><h1 class="title d-none d-lg-block display-7">1INF03 - Análisis de Datos</h1></div><div class="quarto-title-meta"><div><div class="quarto-title-meta-heading">Author</div><div class="quarto-title-meta-contents"><div class="quarto-title-authors"><div><div>
-<p>Lucio Cornejo</p>
-</div></div></div></div></div><div><div class="quarto-title-meta-heading">Published</div><div class="quarto-title-meta-contents"><p class="date">April 8, 2022</p></div></div></div></header>
 
-<section id="descripción" class="level1 unnumbered">
-<h1 class="unnumbered">Descripción</h1>
-<p>Apuntes del curso <strong>Análisis de Datos</strong>, dictado en la <em>Pontificia Universidad Católica del Perú</em>.</p>
-
-
-
-</section>
 </main> <!-- /main -->
 <script type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -358,12 +415,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation column-body">
+<nav class="page-navigation column-page-right">
   <div class="nav-page nav-page-previous">
+      <a href="./laboratorio-01.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Laboratorio 01</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./semana-01.html" class="pagination-link">
-        <span class="nav-page-text">Semana 03/21</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

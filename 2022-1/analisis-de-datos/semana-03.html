@@ -3,9 +3,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="quarto-0.9.180">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <meta name="author" content="Lucio Cornejo">
-  <meta name="dcterms.date" content="2022-04-08">
-  <title>1INF03 - Análisis de Datos</title>
+  <title>1INF03 - Análisis de Datos - Semana 04/04</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -22,7 +20,8 @@
   <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
   <script src="site_libs/quarto-search/fuse.min.js"></script>
   <script src="site_libs/quarto-search/quarto-search.js"></script>
-  <link href="./semana-01.html" rel="next">
+  <link href="./laboratorio-01.html" rel="next">
+  <link href="./semana-02.html" rel="prev">
   <script src="site_libs/quarto-html/quarto.js"></script>
   <script src="site_libs/quarto-html/popper.min.js"></script>
   <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -53,6 +52,7 @@
       "search-submit-button-title": "Submit"
     }
   }</script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
@@ -62,7 +62,7 @@
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">1INF03 - Análisis de Datos</h1>
+      <h1 class="quarto-secondary-nav-title">Semana 04/04</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -92,7 +92,7 @@
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">Descripción</a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Descripción</a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -115,7 +115,7 @@
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./semana-03.html" class="sidebar-item-text sidebar-link">Semana 04/04</a>
+  <a href="./semana-03.html" class="sidebar-item-text sidebar-link active">Semana 04/04</a>
   </div>
 </li>
     </ul>
@@ -163,7 +163,24 @@
         <nav id="TOC" role="doc-toc">
 <h2 id="toc-title">Tabla de Contenidos</h2>
 <ul>
-<li><a href="#descripción" class="nav-link active" data-scroll-target="#descripción">Descripción</a></li>
+<li><a href="#tipos-de-datos-según-su-origen" class="nav-link active" data-scroll-target="#tipos-de-datos-según-su-origen">Tipos de datos según su origen</a>
+<ul class="collapse">
+<li><a href="#tipo-de-variable" class="nav-link" data-scroll-target="#tipo-de-variable">Tipo de variable</a></li>
+</ul></li>
+<li><a href="#medidas-de-resumen" class="nav-link" data-scroll-target="#medidas-de-resumen">Medidas de resumen</a></li>
+<li><a href="#tendencia-central" class="nav-link" data-scroll-target="#tendencia-central">Tendencia central</a>
+<ul class="collapse">
+<li><a href="#variabilidad" class="nav-link" data-scroll-target="#variabilidad">Variabilidad</a></li>
+<li><a href="#asimetría" class="nav-link" data-scroll-target="#asimetría">Asimetría</a></li>
+<li><a href="#curtosis" class="nav-link" data-scroll-target="#curtosis">Curtosis</a></li>
+</ul></li>
+<li><a href="#distribución-marginal" class="nav-link" data-scroll-target="#distribución-marginal">Distribución marginal</a></li>
+<li><a href="#distribución-condicional" class="nav-link" data-scroll-target="#distribución-condicional">Distribución condicional</a></li>
+<li><a href="#hands-on-step2_entendimiento_de_datos.ipynb" class="nav-link" data-scroll-target="#hands-on-step2_entendimiento_de_datos.ipynb">Hands-on: step2_entendimiento_de_datos.ipynb</a>
+<ul class="collapse">
+<li><a href="#medidas-de-tendencia-central" class="nav-link" data-scroll-target="#medidas-de-tendencia-central">Medidas de tendencia central</a></li>
+<li><a href="#medidas-de-variabilidad" class="nav-link" data-scroll-target="#medidas-de-variabilidad">Medidas de variabilidad</a></li>
+</ul></li>
 </ul>
 </nav>
     </div>
@@ -171,18 +188,226 @@
 <main class="content column-body" id="quarto-document-content">
 <header id="title-block-header" class="quarto-title-block default">
 
+<div class="quarto-title"><h1 class="title d-none d-lg-block display-7">Semana 04/04</h1></div></header>
+
+<section id="tipos-de-datos-según-su-origen" class="level2">
+<h2 class="anchored" data-anchor-id="tipos-de-datos-según-su-origen">Tipos de datos según su origen</h2>
+<section id="tipo-de-variable" class="level3">
+<h3 class="anchored" data-anchor-id="tipo-de-variable">Tipo de variable</h3>
+<ol type="1">
+<li>Según naturaleza</li>
+</ol>
+<ul>
+<li>Cualitativa (categorías)</li>
+<li>Cuantitativa
+<ul>
+<li>Discreta</li>
+<li>Continua</li>
+</ul></li>
+</ul>
+<ol type="1">
+<li>Según escala de medida</li>
+</ol>
+<ul>
+<li>Nominal
+<ul>
+<li>Cualitativa</li>
+</ul></li>
+<li>Ordinal
+<ul>
+<li>Cualitativa</li>
+</ul></li>
+<li>De Intervalo
+<ul>
+<li>Cuantitativa</li>
+<li>Solo existe un zero relativo, cuyo valor <strong>no significa ausencia</strong>. Simplemente es una referencia dentro de una escala de medida.</li>
+<li>Ejemplo: Temperatura</li>
+</ul></li>
+<li>De razón
+<ul>
+<li>Cuantitativa</li>
+<li>Existe un cero absoluto que <strong>significa ausencia de la unidad</strong>.</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="medidas-de-resumen" class="level2">
+<h2 class="anchored" data-anchor-id="medidas-de-resumen">Medidas de resumen</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/medidas-de-resumen.png" class="img-fluid figure-img" width="360"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Medidas básicas de resumen</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="tendencia-central" class="level2">
+<h2 class="anchored" data-anchor-id="tendencia-central">Tendencia central</h2>
+<p>La media trabaja con la <strong>magnitud</strong> de los elementos. Se le puede entender como un <em>punto de equilibrio</em> de una distribución.</p>
+<p>La mediana trabaja con la <strong>posición</strong> de los elementos (ordenados). Esta divide a la variable en <em>dos partes iguales</em>.</p>
+<p>Una variable ordinal podría no tener asociada una mediana, en caso que la cantidad de datos sea par, pues requeriría realizar un promedio entre ambas categorías <em>centrales</em>.</p>
+<p>La <strong>moda</strong> no es muy útil para variables continuas, ya que la frecuencia de un único valor está no definida. Incluso para variables discretas la moda no es tan útil, comparado a la media o mediana.</p>
+<p>Debe tenerse cuidado con transformar variables ordinales en numéricas, si es que se desea aprovechar en un cierto modelo, pero <strong>no es recomendable</strong>.</p>
+<p>Moda, es el valor <strong>más frecuente</strong> de la variable. <em>Pico más alto</em> de la distribución.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/tendencia-central.png" class="img-fluid figure-img" width="406"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Tendencia central</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li>Cuantil
+<ul>
+<li>Dividen al total de observaciones en <em>m</em> partes iguales.</li>
+<li><span class="math inline">\(\text{ Cuantil}_i = \frac{i * n}{m}\)</span></li>
+</ul></li>
+<li>Cuartil
+<ul>
+<li>Dividen al total de observaciones en <em>4</em> partes iguales.</li>
+<li><span class="math inline">\(\text{ Q}_i = \frac{i * n}{4}\)</span></li>
+</ul></li>
+<li>Decil
+<ul>
+<li>Dividen al total de observaciones en <em>10</em> partes iguales.</li>
+<li><span class="math inline">\(\text{ D}_i = \frac{i * n}{10}\)</span></li>
+</ul></li>
+</ul>
+<section id="variabilidad" class="level3">
+<h3 class="anchored" data-anchor-id="variabilidad">Variabilidad</h3>
+<ul>
+<li><strong>Rango</strong>: <em>máximo - mínimo</em></li>
+<li><strong>Rango Intercuartil</strong>:
+<ul>
+<li><span class="math inline">\(R = Q_3 - Q_1\)</span></li>
+<li><span class="math inline">\(R\)</span> pequeño implica poca dispersión.</li>
+<li>Es la medida de dispersión recomendada cuando la distribución presenta <strong>datos atípicos</strong>.</li>
+</ul></li>
+<li><strong>Varianza <em>muestral</em></strong>:
+<ul>
+<li><span class="math inline">\(S^2 (x) = \frac{\sum_{i=1}^{n}\left( x_i - \bar{x} \right)^2}{n-1}\)</span></li>
+<li>Es casi como un <em>promedio de distancias</em>.</li>
+<li>El término <span class="math inline">\(n-1\)</span> es para que la varianza muetral tienda a la varianza poblacional (<em>estimador insesgado</em>).</li>
+</ul></li>
+<li><strong>Desviación estándar <em>muestral</em></strong>
+<ul>
+<li><span class="math inline">\(s(x) = \sqrt{ \frac{\displaystyle{\sum_{i=1}^{n}} \left( x_i - \bar{x} \right)^2}{n-1}}\)</span></li>
+</ul></li>
+<li><strong>Coeficiente de variación</strong>
+<ul>
+<li><span class="math inline">\(CV(x) = \frac{s(x)}{\bar{x}}\)</span></li>
+<li><strong>Carece de unidades.</strong> Está <em>estandarizado</em>, así que se puede emplear para comparar distribuciones con diferentes escalas de medida.</li>
+<li>Menor coeficiente de variación implica mayor homogeneidad.</li>
+<li>Este valor está sesgado cuando existen valores atípicos en la data. En ese caso, se debe hace un tratamiento especial para los datos atípicos; no basta con usar algo como <span class="math inline">\(IQR(x) \over median(x)\)</span></li>
+</ul></li>
+</ul>
+<div class="important">
+<ul>
+<li><p>Cuando la distribución no presenta valores atípicos (o tiene muy pocos (percentage wise)), y es símetrica, se recomiendan como medidas de resumen la media, varianza y desviación estándar.</p></li>
+<li><p>Cuando la distribución presenta datos atípicos, y es asimétrica, se recomiendan como medidas de resumen la mediana y el rango intercuartil.</p></li>
+</ul>
+</div>
+</section>
+<section id="asimetría" class="level3">
+<h3 class="anchored" data-anchor-id="asimetría">Asimetría</h3>
+<ul>
+<li><p>Trata sobre la <em>deformación horizontal</em>.</p></li>
+<li><p><strong>Coeficiente de asimetría (AS)</strong></p>
+<ul>
+<li><em>Asimetría negativa</em>: <span class="math inline">\(AS &lt; 0\)</span>
+<ul>
+<li>Cola jalada hacia la izquierda.</li>
+</ul></li>
+<li><em>Simétrica</em>: <span class="math inline">\(AS = 0\)</span></li>
+<li><em>Asimetría positiva</em>: <span class="math inline">\(AS &gt; 0\)</span>
+<ul>
+<li>Cola jalada hacia la derecha.</li>
+</ul></li>
+</ul></li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/asimetria.png" class="img-fluid figure-img" width="540"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Asimetría</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="curtosis" class="level3">
+<h3 class="anchored" data-anchor-id="curtosis">Curtosis</h3>
+<ul>
+<li><p>Trata sobre <em>deformación vertical</em>.</p></li>
+<li><p>No hay límite establecido, solo referencias, para saber qué tipo de curtosis está presente.</p></li>
+<li><p>Mayor coeficiente de curtosis implica mayor deformación vertical.</p></li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/curtosis.png" class="img-fluid figure-img" width="382"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Curtosis</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/tipos-de-curtosis.png" class="img-fluid figure-img" width="384"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Tipos de curtosis</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>La curtosis mesocúrtica hace referencia a cuando la distribución se asemeja a la <strong>normal</strong>.</p>
+<div class="important">
+<p>En general, cuando vamos a presentar estadísticas, estas deben estar acompañadas de su gráfico respectivo.</p>
+</div>
+</section>
+</section>
+<section id="distribución-marginal" class="level2">
+<h2 class="anchored" data-anchor-id="distribución-marginal">Distribución marginal</h2>
+<ul>
+<li>El estudio de una variable, <strong>no</strong> analizándola por casos/categorías.</li>
+</ul>
+</section>
+<section id="distribución-condicional" class="level2">
+<h2 class="anchored" data-anchor-id="distribución-condicional">Distribución condicional</h2>
+<ul>
+<li><p>Análisis de una variable en función de otras, tratadas como casos/categorías.</p></li>
+<li><p>Si una variable <span class="math inline">\(X\)</span> presenta una misma distribución marginal que sus distribuciones condicionales, respecto a una colección <span class="math inline">\(Y\)</span> de categorías, entonces se concluye que estas variables (<span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span>) <strong>no están relacionadas</strong>.</p></li>
+</ul>
+</section>
+<section id="hands-on-step2_entendimiento_de_datos.ipynb" class="level2">
+<h2 class="anchored" data-anchor-id="hands-on-step2_entendimiento_de_datos.ipynb">Hands-on: step2_entendimiento_de_datos.ipynb</h2>
+<ul>
+<li><p>Uno de los primeros pasos tras cargar la data es verificar que cada columna tenga el tipo de dato que le corresponde. Por ejemplo, variables cuantitativas como float, int, etc.</p></li>
+<li><p>También hay que omitir duplicados en el dataset.</p></li>
+<li><p>Al omitir los datos vacíos, no calcular solo cuántos datos vacíos hay, sino también el <strong>porcentaje que representan</strong> por columna/variable.</p></li>
+</ul>
+<section id="medidas-de-tendencia-central" class="level3">
+<h3 class="anchored" data-anchor-id="medidas-de-tendencia-central">Medidas de tendencia central</h3>
+<ul>
+<li>Comparando media y mediana de una misma lista de datos, podemos deducir información sobre la presencia de valores atípicos.</li>
+</ul>
+</section>
+<section id="medidas-de-variabilidad" class="level3">
+<h3 class="anchored" data-anchor-id="medidas-de-variabilidad">Medidas de variabilidad</h3>
+<p><strong>Hasta entendimiento de datos entrará en el laboratorio 1 de mañana.</strong></p>
 
 
-<div class="quarto-title"><h1 class="title d-none d-lg-block display-7">1INF03 - Análisis de Datos</h1></div><div class="quarto-title-meta"><div><div class="quarto-title-meta-heading">Author</div><div class="quarto-title-meta-contents"><div class="quarto-title-authors"><div><div>
-<p>Lucio Cornejo</p>
-</div></div></div></div></div><div><div class="quarto-title-meta-heading">Published</div><div class="quarto-title-meta-contents"><p class="date">April 8, 2022</p></div></div></div></header>
 
-<section id="descripción" class="level1 unnumbered">
-<h1 class="unnumbered">Descripción</h1>
-<p>Apuntes del curso <strong>Análisis de Datos</strong>, dictado en la <em>Pontificia Universidad Católica del Perú</em>.</p>
-
-
-
+</section>
 </section>
 </main> <!-- /main -->
 <script type="application/javascript">
@@ -360,10 +585,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation column-body">
   <div class="nav-page nav-page-previous">
+      <a href="./semana-02.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Semana 03/28</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./semana-01.html" class="pagination-link">
-        <span class="nav-page-text">Semana 03/21</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./laboratorio-01.html" class="pagination-link">
+        <span class="nav-page-text">Laboratorio 01</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
