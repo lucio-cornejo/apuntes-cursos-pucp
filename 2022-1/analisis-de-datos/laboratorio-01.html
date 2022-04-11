@@ -155,17 +155,49 @@
     </div>
 </nav>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+<h2 id="toc-title">Tabla de Contenidos</h2>
+<ul>
+<li><a href="#mis-soluciones-del-laboratorio-ipynb" class="nav-link active" data-scroll-target="#mis-soluciones-del-laboratorio-ipynb">Mis soluciones del laboratorio (ipynb)</a></li>
+</ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content column-page-right" id="quarto-document-content">
+<main class="content column-body" id="quarto-document-content">
 <header id="title-block-header" class="quarto-title-block default">
 
 <div class="quarto-title"><h1 class="title d-none d-lg-block display-7">Laboratorio 01</h1></div></header>
-<p>uyuyui</p>
+
+<p>En los laboratorios 3 y 5 se debe presentar avances del proyecto final.</p>
+<section id="mis-soluciones-del-laboratorio-ipynb" class="level2">
+<h2 class="anchored" data-anchor-id="mis-soluciones-del-laboratorio-ipynb">Mis soluciones del laboratorio (ipynb)</h2>
+<ul>
+<li><p><a href="./laboratorios/Laboratorio_1-python.html" title="Change extension in browser link for notebook download">Python version</a></p></li>
+<li><p><a href="./laboratorios/Laboratorio_1-r.html">R version</a></p></li>
+</ul>
 
 
 
+</section>
 </main> <!-- /main -->
+<script>
+  //// Hide items in sidebar's sections, when page loads ////
+  window.addEventListener('DOMContentLoaded', function() {
+    let sidebarContainers =
+    Array.prototype.slice.call(
+      document.querySelectorAll('div.sidebar-item-container')
+      )
+    // Filter the actual containers
+    sidebarContainers = sidebarContainers.filter(
+      (container) => container.nextElementSibling != null
+    )
+    // Close sidebar containers
+    sidebarContainers.forEach( (container) => {
+      container.nextElementSibling.classList.remove('show');
+    })
+  })        
+</script>
 <script type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const icon = "";
@@ -242,7 +274,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation column-page-right">
+<nav class="page-navigation column-body">
   <div class="nav-page nav-page-previous">
       <a href="./semana-03.html" class="pagination-link">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Semana 04/04</span>

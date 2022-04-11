@@ -182,6 +182,23 @@
 
 </section>
 </main> <!-- /main -->
+<script>
+  //// Hide items in sidebar's sections, when page loads ////
+  window.addEventListener('DOMContentLoaded', function() {
+    let sidebarContainers =
+    Array.prototype.slice.call(
+      document.querySelectorAll('div.sidebar-item-container')
+      )
+    // Filter the actual containers
+    sidebarContainers = sidebarContainers.filter(
+      (container) => container.nextElementSibling != null
+    )
+    // Close sidebar containers
+    sidebarContainers.forEach( (container) => {
+      container.nextElementSibling.classList.remove('show');
+    })
+  })        
+</script>
 <script type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const icon = "";

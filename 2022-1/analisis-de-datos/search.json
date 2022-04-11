@@ -88,13 +88,27 @@
     "href": "laboratorio-01.html",
     "title": "Laboratorio 01",
     "section": "",
-    "text": "uyuyui"
+    "text": "En los laboratorios 3 y 5 se debe presentar avances del proyecto final."
+  },
+  {
+    "objectID": "laboratorio-01.html#mis-soluciones-del-laboratorio-ipynb",
+    "href": "laboratorio-01.html#mis-soluciones-del-laboratorio-ipynb",
+    "title": "Laboratorio 01",
+    "section": "Mis soluciones del laboratorio (ipynb)",
+    "text": "Mis soluciones del laboratorio (ipynb)\n\nPython version\nR version"
   },
   {
     "objectID": "python-r-code.html",
     "href": "python-r-code.html",
     "title": "Paralelismo Python R",
     "section": "",
-    "text": "Python\nR\n\n\n\n\ndf.shape\ndim(df)\n\n\ndf.head()\nhead(df)\n\n\ndf.dtypes\nstr(df)\n\n\ndf.nombre_columna\ndf$nombre_columna\n\n\nvariable.astype(variable_type)     x.astype(‘float’)\nas.variable_type(variable)     as.numeric(x)\n\n\ndf.drop_duplicates(inplace=True)\nPENDING\n\n\ndf.dropna(inplace=True)\ndf <- na.omit(df)\n\n\nnumpy.mean(df[“column_name”]\nmean(df[“column_name”])\n\n\ndf[“column_name”].median()\nmedian(df[“column_name”])\n\n\ndf[“column_name”].quantile([0.25, 0.50, 0.75])\nquantile(df[“column_name”], c(0.25, 0.50, 0.75))\n\n\ndf[“column_name”].min()\nmin(df[“column_name”])\n\n\ndf[“column_name”].max()\nmax(df[“column_name”])\n\n\n(df[“column_name”].quantile([0.75])).values - (df[“column_name”].quantile([0.25])).values\nIQR(df[“column_name”]))\n\n\ndf[“column_name”].var()\nvar(df[“column_name”])\n\n\ndf[“column_name”].std()\nsd(df[“column_name”])"
+    "text": "La notación df hace referencia a data frame.\nPrimero mostraré el código en Python, después en R, separando cada pareja de códigos análogos por un segmento de recta."
+  },
+  {
+    "objectID": "python-r-code.html#semana-0404",
+    "href": "python-r-code.html#semana-0404",
+    "title": "Paralelismo Python R",
+    "section": "Semana 04/04",
+    "text": "Semana 04/04\n\nData frame manipulation\ndf.shape\ndim(df)\n\ndf.head() \nhead(df)\n\ndf.dtypes \nstr(df)\n\ndf.nombre_columna \ndf$nombre_columna\n\nvariable.astype(variable_type) &nbsp;&nbsp;&nbsp; x.astype('float') \nas.variable_type(variable) &nbsp;&nbsp;&nbsp; as.numeric(x)\n\ndf.drop_duplicates(inplace=True) \ndf <- dplyr::distinct(df, .keep_all = TRUE)\n\ndf.dropna(inplace=True) \ndf <- na.omit(df)\n\nnumpy.mean(df[\"column_name\"] \nmean(df[\"column_name\"])\n\ndf[\"column_name\"].median() \nmedian(df[\"column_name\"])\n\ndf[\"column_name\"].quantile([0.25, 0.50, 0.75]) \nquantile(df[\"column_name\"], c(0.25, 0.50, 0.75))\n\ndf[\"column_name\"].min() \nmin(df[\"column_name\"])\n\ndf[\"column_name\"].max() \nmax(df[\"column_name\"])\n\n(df[\"column_name\"].quantile([0.75])).values - (df[\"column_name\"].quantile([0.25])).values \nIQR(df[\"column_name\"])\n\ndf[\"column_name\"].var() \nvar(df[\"column_name\"])\n\ndf[\"column_name\"].std() \nsd(df[\"column_name\"])"
   }
 ]
