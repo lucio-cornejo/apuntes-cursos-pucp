@@ -91,11 +91,11 @@
     "text": "En los laboratorios 3 y 5 se debe presentar avances del proyecto final."
   },
   {
-    "objectID": "laboratorio-01.html#mis-soluciones-del-laboratorio-ipynb",
-    "href": "laboratorio-01.html#mis-soluciones-del-laboratorio-ipynb",
+    "objectID": "laboratorio-01.html#mis-soluciones-del-laboratorio",
+    "href": "laboratorio-01.html#mis-soluciones-del-laboratorio",
     "title": "Laboratorio 01",
-    "section": "Mis soluciones del laboratorio (ipynb)",
-    "text": "Mis soluciones del laboratorio (ipynb)\n\nPython version\nR version"
+    "section": "Mis soluciones del laboratorio",
+    "text": "Mis soluciones del laboratorio\n\nPython version\nR version"
   },
   {
     "objectID": "python-r-code.html",
@@ -109,6 +109,6 @@
     "href": "python-r-code.html#semana-0404",
     "title": "Paralelismo Python R",
     "section": "Semana 04/04",
-    "text": "Semana 04/04\n\nData frame manipulation\ndf.shape\ndim(df)\n\ndf.head() \nhead(df)\n\ndf.dtypes \nstr(df)\n\ndf.nombre_columna \ndf$nombre_columna\n\nvariable.astype(variable_type) &nbsp;&nbsp;&nbsp; x.astype('float') \nas.variable_type(variable) &nbsp;&nbsp;&nbsp; as.numeric(x)\n\ndf.drop_duplicates(inplace=True) \ndf <- dplyr::distinct(df, .keep_all = TRUE)\n\ndf.dropna(inplace=True) \ndf <- na.omit(df)\n\nnumpy.mean(df[\"column_name\"] \nmean(df[\"column_name\"])\n\ndf[\"column_name\"].median() \nmedian(df[\"column_name\"])\n\ndf[\"column_name\"].quantile([0.25, 0.50, 0.75]) \nquantile(df[\"column_name\"], c(0.25, 0.50, 0.75))\n\ndf[\"column_name\"].min() \nmin(df[\"column_name\"])\n\ndf[\"column_name\"].max() \nmax(df[\"column_name\"])\n\n(df[\"column_name\"].quantile([0.75])).values - (df[\"column_name\"].quantile([0.25])).values \nIQR(df[\"column_name\"])\n\ndf[\"column_name\"].var() \nvar(df[\"column_name\"])\n\ndf[\"column_name\"].std() \nsd(df[\"column_name\"])"
+    "text": "Semana 04/04\ndf.shape\ndim(df)\n\ndf.head() \nhead(df)\n\npd.read_csv(\"file.csv\")\nread.csv(\"file.csv\")\n\ndf.dtypes \nstr(df)\n\n# More precise alternative\nsapply(df,class)\n\ndf.describe()\nskimr::skim(df)\n\ndf.nombre_columna \ndf$nombre_columna\n\nvariable.astype(variable_type)\n\n# Example\nx.astype('float') \nas.variable_type(variable)\n\n# Example\nas.numeric(x)\n\ndf.drop_duplicates(inplace=True) \ndf <- dplyr::distinct(df, .keep_all = TRUE)\n\ndf.drop_duplicates(subset =\"column_name\", inplace = True)\ndf <- df %>% dplyr::distinct(column_name, .keep_all = TRUE)\n\ndf.sort_values(by=['column_name'], inplace=True, ascending = False)\ndf <- df %>% arrange(desc(column_name))\n\ndf.dropna(inplace=True) \ndf <- na.omit(df)\n\ndf2 = df.groupby([\"column_name_1\"])\ndf2 = df2[\"column_name_2\"].std() / df2[\"column_name_2\"].mean()\ndf2.sort_values()\ndf2 <- df %>% \n  group_by(column_name_1) %>%\n  summarize(some_name = sd(column_name_2) / mean(column_name_2)) %>%\n  arrange(some_name)\n\nnumpy.mean(df[\"column_name\"])\nmean(df[\"column_name\"])\n\ndf[\"column_name\"].median() \nmedian(df[\"column_name\"])\n\ndf[\"column_name\"].quantile([0.25, 0.50, 0.75]) \nquantile(df[\"column_name\"], c(0.25, 0.50, 0.75))\n\ndf[\"column_name\"].min() \nmin(df[\"column_name\"])\n\ndf[\"column_name\"].max() \nmax(df[\"column_name\"])\n\n(df[\"column_name\"].quantile([0.75])).values - (df[\"column_name\"].quantile([0.25])).values \nIQR(df[\"column_name\"])\n\ndf[\"column_name\"].var() \nvar(df[\"column_name\"])\n\ndf[\"column_name\"].std() \nsd(df[\"column_name\"])\n\ndf2 = df[[\"column_name_1\", \"column_name_2\"]].std() / df[[\"column_name_1\", \"column_name_2\"]].mean()\ndf2 <- df %>%\n  summarize(\n    across(\n      c(column_name_1, column_name_2),\n      function(x) { sd(x) / mean(x) }\n    )\n  ) \n\n# Coeficientes de deformación\ndf['column_name'].skew()\ndf['column_name'].kurt()\nmoments::skewness(df['column_name'])\nmoments::kurtosis(df['column_name'])\n\ndf.column_name.unique()\nunique(df$column_name)"
   }
 ]
