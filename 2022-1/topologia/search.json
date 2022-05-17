@@ -9,8 +9,36 @@
   {
     "objectID": "semana-01.html",
     "href": "semana-01.html",
-    "title": "Semana 03/21",
+    "title": "1  Semana",
     "section": "",
-    "text": "lorem ipsum"
+    "text": "Prop:\np está en la clausura de A si y solo si toda vecindad de p contiene algún punto de A.\nProp:\nNo toda topología es inducida por una métrica.\nTopología discreta para X: tau = P(X)\nTopología trivial para X: tau = {vacio, X}\nProp:\nSea (X, tau) un espacio topológico.\nB es una base de tau si y solo si los elementos de tau son exactamenten las uniones en B."
+  },
+  {
+    "objectID": "semana-02.html",
+    "href": "semana-02.html",
+    "title": "2  Semana",
+    "section": "",
+    "text": "La top. producto es a menor topo. que hace las proyecctiones continuas.\nTopo. inducida\n(X, tau) induce en Y subset de X: { V int Y | V in tau }\nProp:\nSea f: X -> Y continua y a en X.\nEntonces toda sucesion (x_n) en X con (x_n) -> a cumple (f(x_n)) -> f(a).\nLa recíproca no siempre es cierta.\nProyeccion natural\nX -> X, vía rho\nX -> Y, vía f. \n\nEntonces, f_tilde: X -> Y es el levantamiento (por rho) de f.\nTopología cociente\nMenor topo. que hace que f entre X* e Y es continua si y solo si f_tilde: X -> Y es continua."
+  },
+  {
+    "objectID": "semana-03.html",
+    "href": "semana-03.html",
+    "title": "3  Semana",
+    "section": "",
+    "text": "Aplicación cociente f: X -> Y es una aplicación cociente si y solo si\n(V subset de Y es abierto si y solo si f^(-1)(V) es abierto)\nProp:\nSea f: X -> Y continua y sobre.\nEntonces f abierta implica f aplicación cociente.\nProp:\nTodo homeomorfismo local es una aplicación abierta.\nProp:\nTodo espacio métrico es de Hausdorff.\nProp:\nf: Z -> XxY, este last set con topo producto.\nEntonces:\nf es continua si y solo si sus (dos) proyecciones son continuas.\nDef:\nf: X -> Y es un encaje si f: X -> f(X) es un homeomorfismo.\nProp:\nSubsets de Hausdorff space son Hausdorff space.\nProp:\nSer Hausdorff se preserva via homeomorfismo."
+  },
+  {
+    "objectID": "semana-04.html",
+    "href": "semana-04.html",
+    "title": "4  Semana",
+    "section": "",
+    "text": "Prop:\nSea f: X -> Y, sobreyectiva, se cumple:\nf es aplicación cociente si y solo si\n(V subset de Y abto si y solo si f^(-1)(V) abto en X)\nsi y solo si\n(F subset de Y cerrado si y solo si f^(-1)(F) cerrado en X)\n\nProp:\nSi f es continua, cerrada y sobre, también es aplicación cociente."
+  },
+  {
+    "objectID": "semana-05.html",
+    "href": "semana-05.html",
+    "title": "5  Semana",
+    "section": "",
+    "text": "Prop:\nSean f: X_1 -> X_2 y g: Y_1 -> Y_2 homemorfismos.\nEntonces, fxg: X_1xY_1 -> X_2xY_2 con\n(x_1, y_1) |-> (f(x_1), g(y_1)) es homemorfismo."
   }
 ]
