@@ -5,5 +5,54 @@
     "title": "MAT317 - Matemática Discreta",
     "section": "",
     "text": "Apuntes del curso Matemática Discreta, dictado en la Pontificia Universidad Católica del Perú."
+  },
+  {
+    "objectID": "semana-01.html",
+    "href": "semana-01.html",
+    "title": "1  Semana",
+    "section": "",
+    "text": "Prop: Pigeonhole principle 2\nn, k enteros positivos con n > k.\nSi repartimos n objetos en k casillas, al menos una de las casillas posee por lo menos dos objetos.\nProp: Pigeonhole principle 3\nSen m, n, r enteros positivos con n > r*m .\nSi repartimos n objetos en m casillas, al menos una de las casillas posee más de r objetos."
+  },
+  {
+    "objectID": "semana-02.html",
+    "href": "semana-02.html",
+    "title": "2  Semana",
+    "section": "",
+    "text": "Prop: Principio del producto\nLa cardinalidad del producto cartesiano de n conjuntos finitos cualesquiera es el producto de la cardinalidad de cada conjunto de aquellos n.\nPermutaciones\nProp:\nn objetos distintos se pueden ubicar en n lugar de n! formas.\nProp:\nn objetos distintos se pueden ubicar en k lugares, con 1 <= k <= n, de n!/(n-k)! formas.\nCombinaciones\nSea X set con n elementos. Se define comb(n, k) como la cantidad de subsets de X que tienen k elementos.\nProp:\ncomb(n, k) = n! / ( (n-k)! * k! )\nPermutaciones con repetición\nSe tienen k_1 objetos a1, … y k_l objetos al, cada par ai, aj con índices diferentes, objetos distintos.\nEntonces, números de permutaciones de tales objetos es (sum_{i=1}^l k_i)! / prod_{i=1}^l ( (k_i)! )\nCaminos en un tablero\nCantidad de caminos (de solo derecha y arriba) entre esquina inferior izquierda y su esquina opuesta, en un tablero de mn:\n(m+n)! / (m!  n!) = comb(m+n, m) = comb(m+n, n) ."
+  },
+  {
+    "objectID": "semana-03.html",
+    "href": "semana-03.html",
+    "title": "3  Semana",
+    "section": "",
+    "text": "Prop:\nEl número de soluciones de x_1 + … + x_n = m en los enteros positivos, con m >= n >= 1, es comb(m-1, m-n) = comb(m-1, n-1) .\nVimos varias identidades para fórmulas combinatorias.\nPrincipio de inclusión-exclusión"
+  },
+  {
+    "objectID": "semana-04.html",
+    "href": "semana-04.html",
+    "title": "4  Semana",
+    "section": "",
+    "text": "Recurrencias lineales\nRecurrencia de orden 2: x_(n+2) = ax_(n+1) + bx_(n)\nr^2 = a*r + b\n\nSi ambas raíces son distintas:\nx_n = alpha(r_1)^n + beta(r_2)^n, para ciertos alpha beta complejos (en C).\nSi ambas raíces son iguales:\nx_n = (alpha + betan)  (r_1)^n, con alpha y beta complejos constantes; además de r_1 = r_2, valor complejo.\nEjemplo para recurrencia de orden 3 con raíces 2,2,3: x_n = alpha(3^n) + (beta + gamman) *(2^n), con alpha, beta y gamma complejos constantes.\nTambién funciona para raíces complejas."
+  },
+  {
+    "objectID": "semana-05.html",
+    "href": "semana-05.html",
+    "title": "5  Semana",
+    "section": "",
+    "text": "C_n = comb(2*n, n) / (n+1)\nC_0 = 1, C_1 = 1, C_2 = 2, C_3 = 5, C_4 = 14, …\nC_(n+1) = sum_{i=0}^{n} ( C_i * C_(n-i) )\nPartición\nSea n entero positivo. Una partición de n es de la forma n = a_1 + … + a_k, con a_i enteros positivos y a_1 >= a_2 >= … >= a_k .\nPor ahora no podemos expresar el número de particiones de n, vía alguna fórmula matemática."
+  },
+  {
+    "objectID": "semana-06.html",
+    "href": "semana-06.html",
+    "title": "6  Semana",
+    "section": "",
+    "text": "f(x) = sum_{n>=0} a_n * x^n\nNo nos importa el radio de convergencia.\nVimos varios ejemplos.\nFalta la clase 12"
+  },
+  {
+    "objectID": "semana-07.html",
+    "href": "semana-07.html",
+    "title": "7  Semana",
+    "section": "",
+    "text": "Prop:\nToda permutación puede expresarse como un producto (composición) de ciclos.\nNúmeros de Stirling\nSean n, k enteros positivos, se define el número de Stirling de primer tipo como\nS(n, k) = ((-1)^(n-k)) * C(n, k)\nDonde, C(n, k) es el número de permutaciones de I_n que tienen exactamente k ciclos.\nProp:\nSean n,k enteros positivos tales que n >= k, se cumple\nC(n, k) = C(n-1, k-1) + (n-1)*C(n-1, k)\nProp:\nsum_{k=0}^n (C(n, k) * x^k) = x * (x+1) * … * (x + n-1)"
   }
 ]
