@@ -3,7 +3,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="quarto-0.9.180">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>MAT243 - Álgebra 3 – tarea-01</title>
+  <title>MAT243 - Álgebra 3 - 2&nbsp; Semana</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -20,8 +20,8 @@
   <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
   <script src="site_libs/quarto-search/fuse.min.js"></script>
   <script src="site_libs/quarto-search/quarto-search.js"></script>
-  <link href="./references.html" rel="next">
-  <link href="./semana-08.html" rel="prev">
+  <link href="./semana-03.html" rel="next">
+  <link href="./semana-01.html" rel="prev">
   <script src="site_libs/quarto-html/quarto.js"></script>
   <script src="site_libs/quarto-html/popper.min.js"></script>
   <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -59,7 +59,7 @@
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">(Untitled)</h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Semana</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -106,7 +106,7 @@
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./semana-02.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Semana</span></a>
+  <a href="./semana-02.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Semana</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -151,7 +151,7 @@
     <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./tarea-01.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">tarea-01.html</span></a>
+  <a href="./tarea-01.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">tarea-01.html</span></a>
   </div>
 </li>
     </ul>
@@ -165,12 +165,60 @@
     </div>
 </nav>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+<h2 id="toc-title">Tabla de Contenidos</h2>
+<ul>
+<li><a href="#conjugación" class="nav-link active" data-scroll-target="#conjugación"> <span class="header-section-number">2.1</span> Conjugación</a></li>
+<li><a href="#teoría-de-galois-básica" class="nav-link" data-scroll-target="#teoría-de-galois-básica"> <span class="header-section-number">2.2</span> Teoría de Galois básica</a></li>
+</ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content column-page-right" id="quarto-document-content">
+<main class="content column-body" id="quarto-document-content">
+<header id="title-block-header" class="quarto-title-block default">
+
+<div class="quarto-title"><h1 class="title d-none d-lg-block display-7"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Semana</span></h1></div></header>
+
+<section id="conjugación" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="conjugación"><span class="header-section-number">2.1</span> Conjugación</h2>
+<p><strong>Prop:</strong><br>
+Sea phi en S_n, se cumple ( phi(i_1) phi(i_2) .. phi(i_n)) = phi (i_1 i_2 … i_n) phi^(-1)</p>
+<p><strong>Prop:</strong><br>
+Dos permutaciones son conjugadas si y solo si poseen la misma estructura.</p>
+<p><strong>Def:</strong><br>
+Sea phi en S_n, N_r(phi) se define como el numero de r-cycles presentes en la descomposición de phi como producto de ciclos disjuntos.</p>
+<p><strong>Prop:</strong><br>
+sum_{i=1}^{n}(i * N_i(r)) = n, para todo r en S_n .</p>
+<p><strong>Prop:</strong><br>
+El orden de una permutación coincide con el mínimo común múltiple de los {k en [1, …, n] : N_k != 0} .</p>
+<p><strong>Prop:</strong><br>
+Elementos en A_n pueden ser conjugados en S_n, sin ser conjugados en A_n .</p>
+<p><strong>Prop:</strong><br>
+A_n es simple, para n &gt;= 5.</p>
+</section>
+<section id="teoría-de-galois-básica" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="teoría-de-galois-básica"><span class="header-section-number">2.2</span> Teoría de Galois básica</h2>
+<p><strong>Prop:</strong><br>
+Todo morfismo de anillos entre cuerpos, o es nulo, o es inyectivo.</p>
+<p><strong>Def:</strong><br>
+Fields <strong>incompatibles</strong> se dice a aquellos que no admiten ring homomorphism no trivial entre ellos.</p>
+<p><strong>Def:</strong><br>
+<strong>Torre de extensiones</strong>: Q R C</p>
+<p><strong>Prop:</strong><br>
+Sea F un subcuerpo de K, con alpha en K.<br>
+F[alpha] := {p(alpha) : p en F[x]} es el menor subanillo de K que contiene a F y a alpha.<br>
+F(alpha) := {p(alpha)/q(alpha) : p,q en F[x] y q(alpha) != 0} es el menor subcuerpo de K que contiene a F y a alpha.</p>
+<p><strong>Prop:</strong><br>
+Para F cuerpo, el anillo F[x] es un dominio euclidiano, con la norma siendo el grado del polinomio.</p>
+<p><strong>Prop:</strong><br>
+La derivación no siempre reduce <strong>en 1</strong> al grado de un polinomio; podría reducirse en más.</p>
+<p><strong>Prop:</strong><br>
+Las únicas unidades en F[x] son las unidades del cuerpo F.</p>
 
 
 
+</section>
 </main> <!-- /main -->
 <script type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -248,15 +296,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation column-page-right">
+<nav class="page-navigation column-body">
   <div class="nav-page nav-page-previous">
-      <a href="./semana-08.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Semana 03/21</span>
+      <a href="./semana-01.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Semana</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link">
-        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./semana-03.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Semana</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

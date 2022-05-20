@@ -9,6 +9,83 @@
   {
     "objectID": "semana-01.html",
     "href": "semana-01.html",
+    "title": "1  Semana",
+    "section": "",
+    "text": "Prop:\nS_n no es abeliano, para todo n >= 3.\nDef:\nCiclo de orden r: (i_1 i_2 … i_r)\ncon r elementos distintos.\nProp:\nTodo ciclo de orden r tiene orden r como elemento de S_n .\nDef:\nFull cycle en S_n es un ciclo de orden n.\nDef:\nTransposición es un ciclo de orden 2.\nHay n * (n-1) * 0.5 transposiciones en S_n .\nProp:\nPara i_1, … i_r distintos, se cumple\n(i_1 i_2 … i_r) = (i_1 i_r)(i_1 i_{r-1})…(i_1 i_3)(i_1 i_2)\nProp:\nToda permutación puede escribirse como un producto de transposiciones.\nDef:\nSea v una permutación de S_n .\nfix(v) = {i: v(i) = i} (fixed set of v)\nsupp(v) = {i: v(i) != i} (support of v)\n\nProp:\ni en supp(v) implica i != v(i) en supp(v) .\nDef:\nPermutaciones se dicen disjuntas si sus supports son disjuntos.\nProp:\nTodo par de permutaciones disjuntas conmutan.\nProp:\nToda permutación es producto de ciclos disjuntos."
+  },
+  {
+    "objectID": "semana-01.html#grupo-alternante-a_n",
+    "href": "semana-01.html#grupo-alternante-a_n",
+    "title": "1  Semana",
+    "section": "1.2 Grupo alternante A_n",
+    "text": "1.2 Grupo alternante A_n\nDef:\nPermutación se dice par si puede escribirse como producto de una cantidad par de transposiciones.\nDef:\nsgn: S_n -> {-1, 1}\nsgn(v) = 1; si v es par.\nsgn(v) = -1; si v es impar.\nA_n es el kernel de sgn."
+  },
+  {
+    "objectID": "semana-02.html",
+    "href": "semana-02.html",
+    "title": "2  Semana",
+    "section": "",
+    "text": "Prop:\nSea phi en S_n, se cumple ( phi(i_1) phi(i_2) .. phi(i_n)) = phi (i_1 i_2 … i_n) phi^(-1)\nProp:\nDos permutaciones son conjugadas si y solo si poseen la misma estructura.\nDef:\nSea phi en S_n, N_r(phi) se define como el numero de r-cycles presentes en la descomposición de phi como producto de ciclos disjuntos.\nProp:\nsum_{i=1}^{n}(i * N_i(r)) = n, para todo r en S_n .\nProp:\nEl orden de una permutación coincide con el mínimo común múltiple de los {k en [1, …, n] : N_k != 0} .\nProp:\nElementos en A_n pueden ser conjugados en S_n, sin ser conjugados en A_n .\nProp:\nA_n es simple, para n >= 5."
+  },
+  {
+    "objectID": "semana-02.html#teoría-de-galois-básica",
+    "href": "semana-02.html#teoría-de-galois-básica",
+    "title": "2  Semana",
+    "section": "2.2 Teoría de Galois básica",
+    "text": "2.2 Teoría de Galois básica\nProp:\nTodo morfismo de anillos entre cuerpos, o es nulo, o es inyectivo.\nDef:\nFields incompatibles se dice a aquellos que no admiten ring homomorphism no trivial entre ellos.\nDef:\nTorre de extensiones: Q R C\nProp:\nSea F un subcuerpo de K, con alpha en K.\nF[alpha] := {p(alpha) : p en F[x]} es el menor subanillo de K que contiene a F y a alpha.\nF(alpha) := {p(alpha)/q(alpha) : p,q en F[x] y q(alpha) != 0} es el menor subcuerpo de K que contiene a F y a alpha.\nProp:\nPara F cuerpo, el anillo F[x] es un dominio euclidiano, con la norma siendo el grado del polinomio.\nProp:\nLa derivación no siempre reduce en 1 al grado de un polinomio; podría reducirse en más.\nProp:\nLas únicas unidades en F[x] son las unidades del cuerpo F."
+  },
+  {
+    "objectID": "semana-03.html",
+    "href": "semana-03.html",
+    "title": "3  Semana",
+    "section": "",
+    "text": "Prop:\nSea p en F[x], polinomio de grado n, con F un cuerpo. Entonces, en el anillo cociente F[x] / (p) = {a_0 + a_1[x] + … a_{n-1}[x]^(n-1): a_i en F} todas esas clases son no equivalentes.\nTeorema de Kronecker\nDado un polinomio no nulo p en F[x]. Existe una extensión de cuerpo K donde se anule p para algún elemento alpha de K.\nAsimismo, no existe subcuerpo propio de F[x]/(p) que contenga solución de p(x) = 0.\nDef:\nLa mínima extensión donde un polinomio se descompone en factores lineales se denomina su splitting field.\nProp:\nSea p irreducible en F[x]. Sea alpha una solución de p(x) = 0 en alguna extensión K de F. Entonces, se cumple\nF[x] / (p) ~ F(alpha) = F[alpha], donde ~ representa isomorfismo.\nProp:\nSea p irreducible en F[x], con una raíz alpha en algún cuerpo de extensión de F. Entonces, p(x)=0 no puede resolverse en ningún cuerpo intermediario entre (exclusivo) F y F(alpha) .\nDef:\nEl minimal polynomial de alpha en el cuerpo F es el único polinomio mónico de menor grado y con coeficientes en F, tal que alpha es ráiz del polinomio."
+  },
+  {
+    "objectID": "semana-03.html#extensiones-algebraicas-o-trascendentales",
+    "href": "semana-03.html#extensiones-algebraicas-o-trascendentales",
+    "title": "3  Semana",
+    "section": "3.1 Extensiones algebraicas o trascendentales",
+    "text": "3.1 Extensiones algebraicas o trascendentales\nDef:\nSean F K cuerpos. Un elemento alpha en K se denomina algebraico sobre F si existe p en F[x] con p(alpha) = 0.\nElementos no algebraicos se denominan trascendentales.\nProp:\nTodo elemento del cuerpo finito F_{p^n} es algebraico sobre el cuerpo F_p .\nDef:\nUna extensión F K se denomina extensión algebraica si cada elemento de K es algebraico sobre F.\nProp:\nLa extensión algebraica de una extensión algebraica, es una extensión algebraica.\nDef:\nUna extensión F K se denomina simple si existe alpha en K con K = F(alpha) ."
+  },
+  {
+    "objectID": "semana-04.html",
+    "href": "semana-04.html",
+    "title": "4  Semana",
+    "section": "",
+    "text": "Prop:\nTodo espacio vectorial admite una base."
+  },
+  {
+    "objectID": "semana-04.html#aplicación",
+    "href": "semana-04.html#aplicación",
+    "title": "4  Semana",
+    "section": "4.2 Aplicación",
+    "text": "4.2 Aplicación\nProp:\nToda extensión finita de cuerpos es también una extensión algebraica.\nDef:\nSea F K una extensión, escribiremos [K : F] para representar dim_{F} K .\nProp:\nSea F K L una extensión (arbitraria) de cuerpos, entonces se cumple\n[L : F] = [L : K] [K : F] ."
+  },
+  {
+    "objectID": "semana-05.html",
+    "href": "semana-05.html",
+    "title": "Semana 03/21",
+    "section": "",
+    "text": "lorem ipsum"
+  },
+  {
+    "objectID": "semana-06.html",
+    "href": "semana-06.html",
+    "title": "Semana 03/21",
+    "section": "",
+    "text": "lorem ipsum"
+  },
+  {
+    "objectID": "semana-07.html",
+    "href": "semana-07.html",
+    "title": "Semana 03/21",
+    "section": "",
+    "text": "lorem ipsum"
+  },
+  {
+    "objectID": "semana-08.html",
+    "href": "semana-08.html",
     "title": "Semana 03/21",
     "section": "",
     "text": "lorem ipsum"

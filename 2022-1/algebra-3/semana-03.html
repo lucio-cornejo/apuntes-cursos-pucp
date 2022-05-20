@@ -3,7 +3,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="quarto-0.9.180">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>MAT243 - Álgebra 3 – tarea-01</title>
+  <title>MAT243 - Álgebra 3 - 3&nbsp; Semana</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -20,8 +20,8 @@
   <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
   <script src="site_libs/quarto-search/fuse.min.js"></script>
   <script src="site_libs/quarto-search/quarto-search.js"></script>
-  <link href="./references.html" rel="next">
-  <link href="./semana-08.html" rel="prev">
+  <link href="./semana-04.html" rel="next">
+  <link href="./semana-02.html" rel="prev">
   <script src="site_libs/quarto-html/quarto.js"></script>
   <script src="site_libs/quarto-html/popper.min.js"></script>
   <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -59,7 +59,7 @@
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">(Untitled)</h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Semana</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -111,7 +111,7 @@
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./semana-03.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Semana</span></a>
+  <a href="./semana-03.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Semana</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -151,7 +151,7 @@
     <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./tarea-01.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">tarea-01.html</span></a>
+  <a href="./tarea-01.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">tarea-01.html</span></a>
   </div>
 </li>
     </ul>
@@ -165,12 +165,51 @@
     </div>
 </nav>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+<h2 id="toc-title">Tabla de Contenidos</h2>
+<ul>
+<li><a href="#extensiones-algebraicas-o-trascendentales" class="nav-link active" data-scroll-target="#extensiones-algebraicas-o-trascendentales"> <span class="header-section-number">3.1</span> Extensiones algebraicas o trascendentales</a></li>
+</ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content column-page-right" id="quarto-document-content">
+<main class="content column-body" id="quarto-document-content">
+<header id="title-block-header" class="quarto-title-block default">
+
+<div class="quarto-title"><h1 class="title d-none d-lg-block display-7"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Semana</span></h1></div></header>
+
+<p><strong>Prop:</strong><br>
+Sea p en F[x], polinomio de grado n, con F un cuerpo. Entonces, en el anillo cociente F[x] / (p) = {a_0 + a_1[x] + … a_{n-1}[x]^(n-1): a_i en F} todas esas clases son <strong>no</strong> equivalentes.</p>
+<p><strong>Teorema de Kronecker</strong><br>
+Dado un polinomio no nulo p en F[x]. Existe una extensión de cuerpo K donde se anule p para algún elemento alpha de K.<br>
+Asimismo, no existe subcuerpo propio de F[x]/(p) que contenga solución de p(x) = 0.</p>
+<p><strong>Def:</strong><br>
+La mínima extensión donde un polinomio se descompone en factores lineales se denomina su <strong>splitting field</strong>.</p>
+<p><strong>Prop:</strong><br>
+Sea p irreducible en F[x]. Sea alpha una solución de p(x) = 0 en alguna extensión K de F. Entonces, se cumple<br>
+F[x] / (p) ~ F(alpha) = F[alpha], donde ~ representa isomorfismo.</p>
+<p><strong>Prop:</strong><br>
+Sea p irreducible en F[x], con una raíz alpha en algún cuerpo de extensión de F. Entonces, p(x)=0 no puede resolverse en ningún cuerpo intermediario entre (exclusivo) F y F(alpha) .</p>
+<p><strong>Def:</strong><br>
+El <strong>minimal polynomial</strong> de alpha en el cuerpo F es el único polinomio mónico de menor grado y con coeficientes en F, tal que alpha es ráiz del polinomio.</p>
+<section id="extensiones-algebraicas-o-trascendentales" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="extensiones-algebraicas-o-trascendentales"><span class="header-section-number">3.1</span> Extensiones algebraicas o trascendentales</h2>
+<p><strong>Def:</strong><br>
+Sean F K cuerpos. Un elemento alpha en K se denomina <strong>algebraico sobre F</strong> si existe p en F[x] con p(alpha) = 0.<br>
+Elementos no algebraicos se denominan <strong>trascendentales</strong>.</p>
+<p><strong>Prop:</strong><br>
+Todo elemento del cuerpo finito F_{p^n} es algebraico sobre el cuerpo F_p .</p>
+<p><strong>Def:</strong><br>
+Una extensión F K se denomina <strong>extensión algebraica</strong> si cada elemento de K es algebraico sobre F.</p>
+<p><strong>Prop:</strong><br>
+La extensión algebraica de una extensión algebraica, es una extensión algebraica.</p>
+<p><strong>Def:</strong><br>
+Una extensión F K se denomina <strong>simple</strong> si existe alpha en K con K = F(alpha) .</p>
 
 
 
+</section>
 </main> <!-- /main -->
 <script type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -248,15 +287,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation column-page-right">
+<nav class="page-navigation column-body">
   <div class="nav-page nav-page-previous">
-      <a href="./semana-08.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Semana 03/21</span>
+      <a href="./semana-02.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Semana</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link">
-        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./semana-04.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Semana</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
