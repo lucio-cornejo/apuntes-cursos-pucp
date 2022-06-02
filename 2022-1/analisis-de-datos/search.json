@@ -110,5 +110,33 @@
     "title": "Paralelismo Python R",
     "section": "Semana 04/04",
     "text": "Semana 04/04\ndf.shape\ndim(df)\n\ndf.head() \nhead(df)\n\npd.read_csv(\"file.csv\")\nread.csv(\"file.csv\")\n\ndf.dtypes \nstr(df)\n\n# More precise alternative\nsapply(df,class)\n\ndf.describe()\nskimr::skim(df)\n\ndf.nombre_columna \ndf$nombre_columna\n\nvariable.astype(variable_type)\n\n# Example\nx.astype('float') \nas.variable_type(variable)\n\n# Example\nas.numeric(x)\n\ndf.drop_duplicates(inplace=True) \ndf <- dplyr::distinct(df, .keep_all = TRUE)\n\ndf.drop_duplicates(subset =\"column_name\", inplace = True)\ndf <- df %>% dplyr::distinct(column_name, .keep_all = TRUE)\n\ndf.sort_values(by=['column_name'], inplace=True, ascending = False)\ndf <- df %>% arrange(desc(column_name))\n\ndf.dropna(inplace=True) \ndf <- na.omit(df)\n\ndf2 = pd.DataFrame(df.isnull().sum())\n# Aplicar una misma función a cada columna de un data frame\n# (plus some other stuff)\ndf2 <- data.frame(\n  t(summarise_all(data.frame(is.na(df)), sum))\n)\n\ndf2 = df.groupby([\"column_name_1\"])\ndf2 = df2[\"column_name_2\"].std() / df2[\"column_name_2\"].mean()\ndf2.sort_values()\ndf2 <- df %>% \n  group_by(column_name_1) %>%\n  summarize(some_name = sd(column_name_2) / mean(column_name_2)) %>%\n  arrange(some_name)\n\nnumpy.mean(df[\"column_name\"])\nmean(df[\"column_name\"])\n\ndf[\"column_name\"].median() \nmedian(df[\"column_name\"])\n\ndf[\"column_name\"].quantile([0.25, 0.50, 0.75]) \nquantile(df[\"column_name\"], c(0.25, 0.50, 0.75))\n\ndf[\"column_name\"].min() \nmin(df[\"column_name\"])\n\ndf[\"column_name\"].max() \nmax(df[\"column_name\"])\n\n(df[\"column_name\"].quantile([0.75])).values - (df[\"column_name\"].quantile([0.25])).values \nIQR(df[\"column_name\"])\n\ndf[\"column_name\"].var() \nvar(df[\"column_name\"])\n\ndf[\"column_name\"].std() \nsd(df[\"column_name\"])\n\ndf2 = df[[\"column_name_1\", \"column_name_2\"]].std() / df[[\"column_name_1\", \"column_name_2\"]].mean()\ndf2 <- df %>%\n  summarize(\n    across(\n      c(column_name_1, column_name_2),\n      function(x) { sd(x) / mean(x) }\n    )\n  ) \n\n# Coeficientes de deformación\ndf['column_name'].skew()\ndf['column_name'].kurt()\nmoments::skewness(df['column_name'])\nmoments::kurtosis(df['column_name'])\n\ndf.column_name.unique()\nunique(df$column_name)"
+  },
+  {
+    "objectID": "semana-05.html",
+    "href": "semana-05.html",
+    "title": "Semana 05/27",
+    "section": "",
+    "text": "No existe mejor metodología per se. Sea KDD o lo que sea; en esencia, todas las metodología dicen lo mismo."
+  },
+  {
+    "objectID": "semana-05.html#step-5-data-mining",
+    "href": "semana-05.html#step-5-data-mining",
+    "title": "Semana 05/27",
+    "section": "Step 5: Data Mining",
+    "text": "Step 5: Data Mining\nObjetivo: Choosing the suitable Data Mining task\nEn este paso, ya tenemos los datos limpios, transformados, sin vacíos ni outliers.\n\nDebemos escoger alguna de las siguientes tareas:\n\nPredecir\nDescribir\nOptimizar\n\n\n\nPredicción\nUsamos variables específicas del dataset para predecir valores desconocidos o futuros de una o varias variable(s) (numérica(s) o categórica(s)) de interés.\n\nTipos:\n\nClassification\nRegression\nclassifier ensembles\n\n\n\n\nDescriptivo\nAnalizamos eventos pasados para entender el presente (no el futuro). No necesariamente busca predecir valores,\n\nTipos:\n\nAssociation Mining\nClustering\nAnomaly Detection\nRough Sets Analysis\n\n\n\n\nOptimización\nPermite mejorar el rendimiento de un proceso sujeto a restricciones.\n\n\nAprendizaje supervisado\n\nLa data es pre categorizada o numérica.\nRequiere de un target, nombre de la variable objetivo.\nIncluye modelos de clasificación y regresión.\n\n\n\nAprendizaje no supervisado\n\nLa data no está labelled en alguna manera.\nIncluye clustering, dimension reduction y association.\nDimension reduction suele usarse solo para variables numéricas.\nNo siempre es necesario aplicar reducción de dimensiones. Pero, en un caso como dataset tiene muchas columnas y pocas filas, sí debe aplicarse.\nLa reducción de dimensiones suele aplicarse en dos casos excluyentes:\n\nMuchas variables (para paso transformación)\n\nCompara la esencia de las variables.\n\nVariables correlacionadas (para paso data mining)\n\nNo tiene sentido aplicar ambos casos de reducción de dimensiones para una misma data.\n\n\n\nReinforcement Learning"
+  },
+  {
+    "objectID": "semana-05.html#step-6",
+    "href": "semana-05.html#step-6",
+    "title": "Semana 05/27",
+    "section": "Step 6:",
+    "text": "Step 6:\nFALTA PEGAR PICS DEL PDF EDITADO POR SENSEI\n\nPara modelos de regresión, es importante usar varios algoritmos de ese tipo y comparar sus resultados."
+  },
+  {
+    "objectID": "semana-05.html#step-7-métodos-de-clasificación",
+    "href": "semana-05.html#step-7-métodos-de-clasificación",
+    "title": "Semana 05/27",
+    "section": "Step 7: Métodos de clasificación",
+    "text": "Step 7: Métodos de clasificación\n\nSe utiliza en análisis supervisado para target categórico.\nClasificar hace referencia a predecir un target categórico.\n\n\nÁrboles de clasificación\n\nknitr::include_graphics(\"images/arbol-de-clasificacion.png\")\n\n\n\n\n\nRoot node\nVariable que discrimina mejor las categorías de Y.\nCada fila del árbola consiste del 100%\n\n\nÁrbol cart\n\n\nÁrbol chaid\n\n\n\nRegresión logística\n\nRegresión para target binario\n\n\nRegresión logística multinomial\n\n\n\nKNN\nSe basa en la proximidad de las instancias.\nClasifica instancias según categoría de K-vecinos.\n\n\nSVM\nClasifica instancias según frontera de desición.\nMaximiza la menor distancia a la frontera."
   }
 ]

@@ -3,32 +3,16 @@ title: Semestre 2022-1
 lang: es
 ---
 
-## {.tabset}
+- [Topología](2022-1/topologia/index.html)
 
-### Topología 
+- [Álgebra 3](2022-1/algebra-3/index.html)
 
-[Libro de apuntes](2022-1/topologia/index.html)
+- [Tópicos de Álgebra](2022-1/algebra-topics/index.html)
 
-### Álgebra 3
+- [Matemática Discreta](2022-1/seminario/index.html)
 
-[Libro de apuntes](2022-1/algebra-3/index.html)
+- [Investigación de Operaciones 1](2022-1/iop1/index.html)
 
-### Tópicos de Álgebra
+- [Investigación de Operaciones 2](2022-1/iop2/index.html)
 
-[Libro de apuntes](2022-1/algebra-topics/index.html)
-
-### Matemática Discreta
-
-[Libro de apuntes](2022-1/seminario/index.html)
-
-### Investigación de Operaciones 1
-
-[Libro de apuntes](2022-1/iop1/index.html)
-
-### Investigación de Operaciones 2
-
-[Libro de apuntes](2022-1/iop2/index.html)
-
-### Análisis de Datos
-
-[Libro de apuntes](2022-1/analisis-de-datos/index.html)
+- [Análisis de Datos](2022-1/analisis-de-datos/index.html)
