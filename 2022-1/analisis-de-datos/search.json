@@ -7,39 +7,130 @@
     "text": "Apuntes del curso Análisis de Datos, dictado en la Pontificia Universidad Católica del Perú."
   },
   {
-    "objectID": "semana-01.html",
-    "href": "semana-01.html",
-    "title": "Semana 03/21",
+    "objectID": "semana-09.html",
+    "href": "semana-09.html",
+    "title": "Semana 06/03",
     "section": "",
-    "text": "Será necesario hacer un grupo con otros estudiantes del curso, con quienes se comparta afinidad de investigación, para el proyecto final del curso, el cual se irá desarrollando a lo largo del curso.\nPython y R son complementatios, no es que uno sea mejor que el otro.\nEn el curso, usaremos Python en su mayoría, pero también se compartirá, después de clase, el código análogo ,en R, de lo que trabajemos.\nEn la unidades 4 y 5, es donde más podremos contrastar el uso de Python y R. De esa manera, uno tendría más claro qué lenguaje escoger al momento de iniciar algún proyecto particular.\nFechas de laboratorio\n\n\n9 abril\n23 abril\n7 mayo\n11 junio\n25 junio\n\nLas dirigidas (perhaps a veces pcs) de IOP se me cruzan con todos los labs, excepto por el primero."
+    "text": "Lo más común es reemplazar al valor atípico máximo (mínimo) vía el valor máximo (mínimo) de la data. Este método puede inducir sesgo en la data.\nTambién podríamos eliminar a los valores atípicos. Pese a que la nueva data podría presentar nuevos outliers, en este caso entra el criterio del negocio, de los expertos, donde, no nos basamos solo de la regla matemática para considerar qué es outlier, sino del criterio más apropiado para el tema del proyecto, sea respecto a un negocio, institución, etc.\nTambién se puede considerar a los valores atípicos como valores vacíos, y hacerles el tratamiento que hemos aprendido para missing data. Tales como la imputación por la media, mediana, o cero; per ese método puede inducir sesgo en la data.\nImputar por cero puede ser beneficioso si la data tiene un centro cercano a cero, pues así no afectaríamos tanto a la data por ser imputada.\n\n\n\nSe puede sustentar matemáticamente qué imputación realizada fue la mejor. Criterios importantes:\n\nLa distribución original de cada variable se ve lo menos deformada tras la imputación.\nEl modelo con la data imputada predice mejor los datos.\n\n\n\n\n\n\n\nCuando una variable categórica posee varios valores, podemos recategorizar esa data, en menos categorías (agruparlas). También podríamos excluir tal variable categórica.\nEs usual convertir variables categóricas a dummies porque existen algoritmos que requieren que su input data sea solamente numérica.\nCuando una variable categórica presenta más de dos valores, y se le reemplaza a las categorías con valores 1, 2, 3, …, n; esto requiere, por lo menos, que la variable categórica transformada sea del tipo ordinal.\nSi para regresión usamos a una variable categórica no ordinal, esta se presentará en la ecuación de regresión de la forma $1x + … + n x $, donde tal variable categórica posee n valores posibles y cada \\(x_i\\) vale 0 o 1.\nPara variables categóricas ordinales, esta se presentará en la ecuación de regresión como \\(\\beta \\cdot x_\\text{ cat }\\), donde la variable \\(x_\\text{ cat }\\) tomará valores 1, 2, 3, …, n.\nEn el caso de tener una variable categórica ordinal que solo posee dos valores, se puede considerar en el modelo como una variable numérica (valor 0 o 1)."
   },
   {
-    "objectID": "semana-01.html#metodología-kdd",
-    "href": "semana-01.html#metodología-kdd",
-    "title": "Semana 03/21",
-    "section": "Metodología KDD",
-    "text": "Metodología KDD\n\n¿Qué es un dato?\n\nEl dato es el valor de una característica/variable/atributo (edad, sexo, etc) de la población (población delimitada en espacio, tiempo, etc).\nProcesos paralelos\n\nVariable \\(\\Rightarrow\\) Variable aleatoria \\(\\Rightarrow\\) Dato\nPoblación \\(\\Rightarrow\\) Muestra \\(\\Rightarrow\\) Observación\n\nLa información parte de la unión de los datos recopilados.\n\nEs de utilidad para tomar decisiones.\nUn solo dato, por su cuenta, no nos da información.\n\nEl conocimiento es un conjunto de informaciones aplicadas, que permite preveer y planificar.\n\nLa información asociada a un contexto y una experiencia se convierte en conocimiento.\n\n\n\n\nDescripción de la metodología KDD\n\nKDD: Knowledge Discovery in Databases\nAlgunas definiciones:\n\n\nKnowledge Discovery in Databases is the non trivial process of identifying valid, novel, potentially useful, and utimately understandable patterns in data.\n\n\nNivel bajo de datos se refiere a datos que no nos dice nada, pero que podría servir para generar conocimiento a partir de estos datos.\n\n\n\nEtapas de la metodología KDD\n\nEsta metodología nos da pasos para cómo convertir datos en conocimiento.\nEstas etapas no son obligatorias … sirven de guía.\n\n\n\n\n\n\nEtapas de la metodología KDD\n\n\n\n\n\nEn la etapa selection, se reduce la cantidad de data, quedándonos con la data que nos va a servir para lograr el objetivo de nuestro análisis.\nImplica filtrar filas y/o columnas/variables de la data (entendida como data frame).\nRequiere el entendimiento del objetivo del análisis.\nLa parte de información surge en la etapa Patterns de la metodología KDD. Esa información requiere del bloque interpretation/evaluation (ver imagen) para convertirse en knowledge .\nEl paso de Transformed data a patterns es vía “Descriptive methods”.\n\n\n\n\n\n\nEtapas (más a detalle) de la metodología KDD\n\n\n\n\n\nLas flechas verticales indican que, a medida que avanzamos en las etapas, podemos volver al inicio para poder obtener nueva data que haya surgido la necesidad de requerir para el análisis.\nEl bloque Active DM (Data Mining) se refiere a que el proceso Data mining forma parte de TODO el proceso de 9 pasos (es otro enfoque).\nRegresar a cualquier paso es válido.\n\n\nPaso 1\n\nEs el paso principal.\nReunirse con los expertos del tema en que se va a trabajar. Se discuten cosas como\n\n¿Cómo sucede el fenómeno?\n¿Qué agentes intervienen con el fenómeno?\n¿Qué datos se recolectan (variables disponibles) o se pueden recolectar para el fenómeno?\n¿Para qué población se va a construir el proyecto?\n\nSe habla en lenguaje entendible para todos los expertos, no usando, por ejemplo, palabras particulares de Estadística.\nSe busca entender el negocio/problema.\nSe busca identificar la meta del proceso KDD desde la perspectiva del customer.\nEs más que nada un proceso cualitativo que servirá para formalizar el análisis futuro.\nEs recomendable crear una ficha resumen sobre este paso, donde se anota la información recopilada en la reunicón (o reuniones) con el customer.\n\nAsignar un experto del negocio como encargado del proyecto. Esta persona debe ir validando el avance del proyecto, en cada uno de los 9 pasos.\nAnotas una meta principal y las secundarias.\nUna vez completa esta ficha resumen es que podemos pasar al siguiente paso; debe redactarse, quedar como evidencia.\n\n\nPaso 2\n\nCreating a target data set.\nFiltramos la data para obtener un subconjunto, tanto en variables (columnas) y data samples (filas), al cual se le analizará durante pasos siguientes.\nNo se trata de la selección de variable que se realiza con código, por ejemplo la que busca explicar un fenómeno con las variables independientes.\nEsta selección no tiene que ver con la calidad de datos. Esa selección ocurrirá más adelante.\nFormalmente, estos filtros se realizan en base a criterios de inclusión/exclusión.\n\nPaso 3\n\nData cleaning and preprocessing.\nSe le dice también remover el ruido. Donde, el ruido hace referencia a los datos atípicos.\nSe ve la forma de trabajar los datos perdidos.\n\nPara construir un modelo, necesitamos lidiar primero con los datos perdidos.\nDependiendo del contexto, y requiriendo fundamento, se pueden imputar/reemplazar los datos vacíos por cero, la mediana de esa variable, etc.\nDesde el punto de vista de la profesora, máximo se debería imputar el 30% de los valores vacíos de una misma variable (que tiene varios valores vacíos). Pues, sino, se estaría trabajando con una variable ficticia, y podría así generar ruido en los resultados obtenidos.\nPero eso no es una regla. La decisión de imputación dependerá del contexto/fenómeno, y debe estar fundamentada numéricamente, además de tener sentido respecto al negocio.\n(Por ejemplo, si imputar una variable por cero tiene sentido en cierto contexto particular).\n\nDebido, en parte, a estas razones, es importante la comunicación constante con un experto del negocio.\n\nPaso 4\n\nData reduction and projection.\nLa transformación de la data debe suceder después de la limpieza de esta."
-  },
-  {
-    "objectID": "semana-02.html",
-    "href": "semana-02.html",
-    "title": "Semana 03/28",
+    "objectID": "semana-09.html#section",
+    "href": "semana-09.html#section",
+    "title": "Semana 06/03",
     "section": "",
-    "text": "Step 4\n\nData reduction and projection.\nUsing methods to reduce the number of variables.\n\nAnálisis factorial\nAnálisis por componentes\nEtc\n\n\nStep 5\n\nResumir, clasificar, regresión, etc, para las variables.\n\nStep 6\n\nChoosing the data mining algorithms\nSe recomienda establecer mínimo tres modelos para poder compararlos tras su funcionamiento.\nNo escoger solo un módelo.\n\nStep 7\n\nData mining: Buscando patrones de interés\n\nStep 8\n\nIdentificar e interpretar los patrones encontrados.\nLa primera identificación es matemática/numérica/estadística.\n\nStep 9\n\nCombinar la interpretación numérica del paso 8 junto a la expertise sobre el negocio, con el fin de poder darle utilidad a lo hallado."
+    "text": "Los datos del test nunca deben balancearse, pues esa data debe reflejar la naturaleza de los datos."
   },
   {
-    "objectID": "semana-02.html#otras-metodologías",
-    "href": "semana-02.html#otras-metodologías",
-    "title": "Semana 03/28",
-    "section": "Otras metodologías",
-    "text": "Otras metodologías\n\n\n\n\n\nOtras metodologías conocidas"
+    "objectID": "semana-08.html",
+    "href": "semana-08.html",
+    "title": "Semana 05/27",
+    "section": "",
+    "text": "No existe mejor metodología per se. Sea KDD o lo que sea; en esencia, todas las metodología dicen lo mismo."
   },
   {
-    "objectID": "semana-02.html#step-1-entendimiento-del-negocio",
-    "href": "semana-02.html#step-1-entendimiento-del-negocio",
-    "title": "Semana 03/28",
-    "section": "Step 1: “Entendimiento del negocio”",
-    "text": "Step 1: “Entendimiento del negocio”\n\nDescribir problema o situación a analizar\n\nEl problema debe expresar una relación entre dos o más variables.\nDebe estar formulado claramente, sin ambigüedad, como pregunta.\nDebe implicar la posiblidad de realizar una prueba empírica o una recolección de datos.\n\n\n\nDefinir los objetivos\n\n¿Qué se desea lograr?\n¿Cómo ayudará al negocio?\nPrincipales áreas interesadas\nOtros objetivos a tener en cuenta.\n¿Qué características debe tener para ser considerado factible?\n¿Qué esperan recibir?\n¿Cómo están pensando utilizar el resultado del análisis de datos?\n¿Con cuánto tiempo contamos?\nObjetivos de analisis de datos\n\nTraducir los objetivos del negocio en objetivos para el análisis.\nEstablecer las métricas o criterios de evaluación de resultados, que serán útiles para el negocio.\nDiseñar un Plan de Análisis de Datos , considerando tiempos, hitos de desarrollo, responsables y fechas para presentación de avances.\nValidar cada paso con el negocio.\n\n\n\n\nDelimitar la población de análisis\n\nLa delimitación principal es en espacio y tiempo.\nUso de los siguientes criterios:\n\nCaso retrospectivo:\n\nInclusión: Características que deben reunir las unidades de observación.\nExclusión: Características que deben estar ausentes en las unidades de observación.\n\nCaso prospectivo:\n\nEliminación: Son aquellas características que aparecen una vez que ya han sido selecctionadas las unidades de observación (surgen en la medida que se realiza el análisis)\n\n\n\n\n\nIdentificar recursos necesarios\n\nPersonas\n\nExperto del negocio\nLíder analítico del proyecto\nEquipo especialista de analistas de datos\nEquipo de accesso e ingeniería de datos\n\nDatos\n\nIdentificar fuentes y dueños de los datos\nPreguntar por la calidad de datos por recibir\n\n¿Cómo se recolectaron los datos?\n¿Cómo se guardaron los datos?\n¿Cómo se llenó la tabla de datos?\n\n\nHerramientas\n\nSoftwares disponibles (libres o con licencia)\nEntorno para selección y preprocesamiento\nEntorno para entrenamiento de modelos\nEntorno para despliegue de modelos\n\n\n\n\nIdentificar limitaciones\n\nLimitaciones del negocio\n\nPosibles restricciones de capacidad operativa\nPoder de acción para utilizar los resultados\nNormativas de la institución o empresa\n\nLimitaciones respecto a datos\n\nSi tendremos acceso a todos los datos\n¿Se tendrá acceso a toda la población definida?\n\nAccesso para que el modelo pueda ser usado por los usuarios relevantes\n\n\nLimitaciones respecto al tiempo\n\nRestricciones en el tiempo de análisis\nTiempo para el despliegue del modelo\n\n\n\n\nOutput del paso 1: Ficha técnica del proyecto de análisis de datos\n\nArchivo en Paideia\n\nLas partes role y area no serán necesario llenarlas.\nProblemática\n\nColocar como pregunta, tipo, “¿Se puede blah …?”\n\nImportante plasmar las limitaciones.\nAcciones de negocio con los resultados\n\nCómo van a desplegar el modelo creado"
+    "objectID": "semana-08.html#step-5-data-mining",
+    "href": "semana-08.html#step-5-data-mining",
+    "title": "Semana 05/27",
+    "section": "Step 5: Data Mining",
+    "text": "Step 5: Data Mining\nObjetivo: Choosing the suitable Data Mining task\nEn este paso, ya tenemos los datos limpios, transformados, sin vacíos ni outliers.\n\nDebemos escoger alguna de las siguientes tareas:\n\nPredecir\nDescribir\nOptimizar\n\n\n\nPredicción\nUsamos variables específicas del dataset para predecir valores desconocidos o futuros de una o varias variable(s) (numérica(s) o categórica(s)) de interés.\n\nTipos:\n\nClassification\nRegression\nclassifier ensembles\n\n\n\n\nDescriptivo\nAnalizamos eventos pasados para entender el presente (no el futuro). No necesariamente busca predecir valores,\n\nTipos:\n\nAssociation Mining\nClustering\nAnomaly Detection\nRough Sets Analysis\n\n\n\n\nOptimización\nPermite mejorar el rendimiento de un proceso sujeto a restricciones.\n\n\nAprendizaje supervisado\n\nLa data es pre categorizada o numérica.\nRequiere de un target, nombre de la variable objetivo.\nIncluye modelos de clasificación y regresión.\n\n\n\nAprendizaje no supervisado\n\nLa data no está labelled en alguna manera.\nIncluye clustering, dimension reduction y association.\nDimension reduction suele usarse solo para variables numéricas.\nNo siempre es necesario aplicar reducción de dimensiones. Pero, en un caso como dataset tiene muchas columnas y pocas filas, sí debe aplicarse.\nLa reducción de dimensiones suele aplicarse en dos casos excluyentes:\n\nMuchas variables (para paso transformación)\n\nCompara la esencia de las variables.\n\nVariables correlacionadas (para paso data mining)\n\nNo tiene sentido aplicar ambos casos de reducción de dimensiones para una misma data.\n\n\n\nReinforcement Learning"
+  },
+  {
+    "objectID": "semana-08.html#step-6",
+    "href": "semana-08.html#step-6",
+    "title": "Semana 05/27",
+    "section": "Step 6:",
+    "text": "Step 6:\nFALTA PEGAR PICS DEL PDF EDITADO POR SENSEI\n\nPara modelos de regresión, es importante usar varios algoritmos de ese tipo y comparar sus resultados."
+  },
+  {
+    "objectID": "semana-08.html#step-7-métodos-de-clasificación",
+    "href": "semana-08.html#step-7-métodos-de-clasificación",
+    "title": "Semana 05/27",
+    "section": "Step 7: Métodos de clasificación",
+    "text": "Step 7: Métodos de clasificación\n\nSe utiliza en análisis supervisado para target categórico.\nClasificar hace referencia a predecir un target categórico.\n\n\nÁrboles de clasificación\n\nknitr::include_graphics(\"images/arbol-de-clasificacion.png\")\n\n\n\n\n\nRoot node\nVariable que discrimina mejor las categorías de Y.\nCada fila del árbola consiste del 100% de los datos.\nSe busca tomar una rama que tenga la mayor purez y mayor cantidad de elementos.\n\n\nÁrbol CART\n\nVariable dependiente: categórica o numérica (árbol de regresión)\nVariables independientes: discretas o continuas\nSe basa en el cálculo de GINI o F-Test.\n\nEl índice de GINI busca cuantificar la pureza de la discriminación/separación de categorías de Y .\n\n\nÁrbol CHAID\n\nVariable dependiente: Categórica\nVariables independientes: Todas deben ser discretizadas (convertidas en categorías).\nSe basa en el cálculo de Chi-cuadrado.\n\n\n\n\nRegresión logística\n\nRegresión para target binario\n\n\nRegresión logística multinomial\n\n\n\nKNN\nSe basa en la proximidad de las instancias.\nClasifica instancias según categoría de K-vecinos.\n\n\nSVM\nClasifica instancias según frontera de desición.\nMaximiza la menor distancia a la frontera."
+  },
+  {
+    "objectID": "semana-06.html",
+    "href": "semana-06.html",
+    "title": "Semana",
+    "section": "",
+    "text": "Algunas veces puede ser útil considerar a los valores vacíos como una nueva categoría. Incluso, puede suceder que un análisis podría revelar algún patrón no trivial respecto a tal nueva categoría creada."
+  },
+  {
+    "objectID": "semana-05.html",
+    "href": "semana-05.html",
+    "title": "Semana",
+    "section": "",
+    "text": "Se recomienda hacer un script por paso KDD"
+  },
+  {
+    "objectID": "semana-05.html#tratamiento-de-vacíos",
+    "href": "semana-05.html#tratamiento-de-vacíos",
+    "title": "Semana",
+    "section": "Tratamiento de vacíos",
+    "text": "Tratamiento de vacíos\nEn el caso que se eliminen datos vacíos, es más dropear a filas del dataset que contengan al menos un dato vacío, en vez de requerir que toda una fila este compuesta por vacíos para decidir eliminar tal fila.\n\nImputación de vacíos por variables numéricas\n\nImputar con ceros\ndf[\"variable_numerica\"].fillna(0, inplace=True)\n\nEs muy utilizada, pero puede ser peligrosa.\nSi el rango de la variable no incluye cero, no tendría sentido imputar por cero.\n\n\n\nImputar vía forward propagation\n\nLa data a ser imputada requiere tener un orden (no trivial) preestablecido.\nLos vacíos se complentan con el valor previo o posterior al nulo.\n\ndf[\"variable_num_o_cat\"]fillna(method = \"pad\")\n\n\nImputar con la media de la variable numérica\ndf_sin_outlier[\"var_num\"] = df_sin_outlier[\"var_num\"].fillna(df_sin_outlier[\"var_num\"].mean())]`\n\n\nImputar vía modelo KNNImputer\n\nEste modelo solo se aplica para variables numéricas, e imputa la media respecto a vecinos.\n\nfrom sklearn.impute import KNNImputer\n\nimputer = KNNImputer(n_neighbors = 3, weights = \"uniform\")\n\nimputer.fit(df_sin_outlier[['var1', 'var2']])\ndf_sin_outlier[['var1', 'var2']] = imputer.transform(df_sin_outlier[['var1', 'var2']])\n\n\nImputar vía modelo IterativeImputer\n\nPor cada variable por imputar, contruye un modelo. Cada modelo usa solo los datos completos para predecir a la data vacía.\nLa imputación se realiza en base a varias variables."
+  },
+  {
+    "objectID": "semana-05.html#estandarización",
+    "href": "semana-05.html#estandarización",
+    "title": "Semana",
+    "section": "Estandarización",
+    "text": "Estandarización\n\\[ (X - \\bar{X}) / \\text{ sd} \\left( X \\right)\\]\nNos permite rescatar la esencia de la variable, sin necesidad de las unidades de medida."
+  },
+  {
+    "objectID": "semana-05.html#normalización",
+    "href": "semana-05.html#normalización",
+    "title": "Semana",
+    "section": "Normalización",
+    "text": "Normalización\n\\[(X - X_{min}) / (X_{max} - X_{min})\\]"
+  },
+  {
+    "objectID": "semana-05.html#discretización",
+    "href": "semana-05.html#discretización",
+    "title": "Semana",
+    "section": "Discretización",
+    "text": "Discretización\n\nConsiste en la conversión de una variable numérica a categórica.\n\ndatos['bin_age'] = pd.cut(df.age, 10)\n\nCaso misma amplitud y diferente frecuencia\n\n\nCaso misma frecuencia y diferente amplitud"
+  },
+  {
+    "objectID": "semana-05.html#variables-dummies",
+    "href": "semana-05.html#variables-dummies",
+    "title": "Semana",
+    "section": "Variables dummies",
+    "text": "Variables dummies\n\nEstas producen variables de 0 y 1 para variables categóricas."
+  },
+  {
+    "objectID": "semana-04.html",
+    "href": "semana-04.html",
+    "title": "Semana",
+    "section": "",
+    "text": "Usaremos la librería pyreadstat para cargar .sav files."
+  },
+  {
+    "objectID": "semana-04.html#omitir-duplicados",
+    "href": "semana-04.html#omitir-duplicados",
+    "title": "Semana",
+    "section": "Omitir duplicados",
+    "text": "Omitir duplicados\nA veces se puede tratar duplicados, tipo para estudio a lo largo del tiempo (como varias visitas del paciente)."
+  },
+  {
+    "objectID": "semana-04.html#tipos-de-variables",
+    "href": "semana-04.html#tipos-de-variables",
+    "title": "Semana",
+    "section": "Tipos de variables",
+    "text": "Tipos de variables\nLas variables numéricas, a las cuales calcularemos media, mediana, etc, deben tener ese tipo en la data. Así, info como DNI se debería convertir en object o string.\nTipo string es caso particular de dato object. Así que es recomendable pasar las variables categóricas a string.\n La conversión de tipo de datos no debe generar pérdida de vacíos. El tratamiento de los vacíos se realizará más adelante."
+  },
+  {
+    "objectID": "semana-04.html#imputación-de-atípicos",
+    "href": "semana-04.html#imputación-de-atípicos",
+    "title": "Semana",
+    "section": "Imputación de atípicos",
+    "text": "Imputación de atípicos\n Las imputaciones deben alterar lo menos posible a la distribución de la data. Las comparaciones podemos hacerla vía las medidas de resumen (quartiles, media, etc) de la data antes y después de la imputación. \n Se recomienda hacer el tratamiento de datos atípicos antes de datos perdidos, para evitar imputaciones sesgadas. Esto porque la imputación a realizar para los datos vacíos puede verse afectada por los valores atípicos, por ejemplo, imputar por la media. \nNo siempre usamos los mismos límites para determinar a los datos atípicos; estos pueden cambiar dependiendo del problema particular. Por ejemplo, considerando 1 o 2 en vez del valor que multiplica al rango intercuartil en la fórmula para los límites superior e inferior."
+  },
+  {
+    "objectID": "semana-04.html#imputación-de-vacíos",
+    "href": "semana-04.html#imputación-de-vacíos",
+    "title": "Semana",
+    "section": "Imputación de vacíos",
+    "text": "Imputación de vacíos\nNo hay margen específico de cuándo excluir a los vacíos. Los umbrales suelen variar dependiendo del contexto.\nImputar más del 30% de los vacíos no es tan recomendable, pero podría cambiar en contextos bien particulares.\nEl identificador (id) no se puede imputar.\nPara modelos donde se aceptan menos errores (sector salud o monetario), recomendable imputar para a lo más 20% de la data. En caso se acepten más errores para el modelo, es aceptable imputar a lo más el 30% de los datos.\nSi nuestro modelo puede aceptar más errores, podemos imputar más vacíos.\nLa imputación debe ser lo más real posible.\nEs posible que, en contextos particulares, vacíos representen un valor (0, por ejemplo). En tal situación, lo correcto sería imputar los vacíos vía 0, incluso si se tenía 75% de vacíos para la variable analizada.\nLas decisiones de imputación deben ser consultadas con los expertos del negocio."
   },
   {
     "objectID": "semana-03.html",
@@ -84,6 +175,41 @@
     "text": "Hands-on: step2_entendimiento_de_datos.ipynb\n\nUno de los primeros pasos tras cargar la data es verificar que cada columna tenga el tipo de dato que le corresponde. Por ejemplo, variables cuantitativas como float, int, etc.\nTambién hay que omitir duplicados en el dataset.\nAl omitir los datos vacíos, no calcular solo cuántos datos vacíos hay, sino también el porcentaje que representan por columna/variable.\nComparando media y mediana de una misma lista de datos, podemos deducir información sobre la presencia de valores atípicos.\n\nHasta entendimiento de datos entrará en el laboratorio 1 de mañana, el cual será individual. Pero, como alumno libre, no tendré nota calificada.\nEl grupo del proyecto final solo puede ser de 4 personas, máximo."
   },
   {
+    "objectID": "semana-02.html",
+    "href": "semana-02.html",
+    "title": "Semana 03/28",
+    "section": "",
+    "text": "Step 4\n\nData reduction and projection.\nUsing methods to reduce the number of variables.\n\nAnálisis factorial\nAnálisis por componentes\nEtc\n\n\nStep 5\n\nResumir, clasificar, regresión, etc, para las variables.\n\nStep 6\n\nChoosing the data mining algorithms\nSe recomienda establecer mínimo tres modelos para poder compararlos tras su funcionamiento.\nNo escoger solo un módelo.\n\nStep 7\n\nData mining: Buscando patrones de interés\n\nStep 8\n\nIdentificar e interpretar los patrones encontrados.\nLa primera identificación es matemática/numérica/estadística.\n\nStep 9\n\nCombinar la interpretación numérica del paso 8 junto a la expertise sobre el negocio, con el fin de poder darle utilidad a lo hallado."
+  },
+  {
+    "objectID": "semana-02.html#otras-metodologías",
+    "href": "semana-02.html#otras-metodologías",
+    "title": "Semana 03/28",
+    "section": "Otras metodologías",
+    "text": "Otras metodologías\n\n\n\n\n\nOtras metodologías conocidas"
+  },
+  {
+    "objectID": "semana-02.html#step-1-entendimiento-del-negocio",
+    "href": "semana-02.html#step-1-entendimiento-del-negocio",
+    "title": "Semana 03/28",
+    "section": "Step 1: “Entendimiento del negocio”",
+    "text": "Step 1: “Entendimiento del negocio”\n\nDescribir problema o situación a analizar\n\nEl problema debe expresar una relación entre dos o más variables.\nDebe estar formulado claramente, sin ambigüedad, como pregunta.\nDebe implicar la posiblidad de realizar una prueba empírica o una recolección de datos.\n\n\n\nDefinir los objetivos\n\n¿Qué se desea lograr?\n¿Cómo ayudará al negocio?\nPrincipales áreas interesadas\nOtros objetivos a tener en cuenta.\n¿Qué características debe tener para ser considerado factible?\n¿Qué esperan recibir?\n¿Cómo están pensando utilizar el resultado del análisis de datos?\n¿Con cuánto tiempo contamos?\nObjetivos de analisis de datos\n\nTraducir los objetivos del negocio en objetivos para el análisis.\nEstablecer las métricas o criterios de evaluación de resultados, que serán útiles para el negocio.\nDiseñar un Plan de Análisis de Datos , considerando tiempos, hitos de desarrollo, responsables y fechas para presentación de avances.\nValidar cada paso con el negocio.\n\n\n\n\nDelimitar la población de análisis\n\nLa delimitación principal es en espacio y tiempo.\nUso de los siguientes criterios:\n\nCaso retrospectivo:\n\nInclusión: Características que deben reunir las unidades de observación.\nExclusión: Características que deben estar ausentes en las unidades de observación.\n\nCaso prospectivo:\n\nEliminación: Son aquellas características que aparecen una vez que ya han sido selecctionadas las unidades de observación (surgen en la medida que se realiza el análisis)\n\n\n\n\n\nIdentificar recursos necesarios\n\nPersonas\n\nExperto del negocio\nLíder analítico del proyecto\nEquipo especialista de analistas de datos\nEquipo de accesso e ingeniería de datos\n\nDatos\n\nIdentificar fuentes y dueños de los datos\nPreguntar por la calidad de datos por recibir\n\n¿Cómo se recolectaron los datos?\n¿Cómo se guardaron los datos?\n¿Cómo se llenó la tabla de datos?\n\n\nHerramientas\n\nSoftwares disponibles (libres o con licencia)\nEntorno para selección y preprocesamiento\nEntorno para entrenamiento de modelos\nEntorno para despliegue de modelos\n\n\n\n\nIdentificar limitaciones\n\nLimitaciones del negocio\n\nPosibles restricciones de capacidad operativa\nPoder de acción para utilizar los resultados\nNormativas de la institución o empresa\n\nLimitaciones respecto a datos\n\nSi tendremos acceso a todos los datos\n¿Se tendrá acceso a toda la población definida?\n\nAccesso para que el modelo pueda ser usado por los usuarios relevantes\n\n\nLimitaciones respecto al tiempo\n\nRestricciones en el tiempo de análisis\nTiempo para el despliegue del modelo\n\n\n\n\nOutput del paso 1: Ficha técnica del proyecto de análisis de datos\n\nArchivo en Paideia\n\nLas partes role y area no serán necesario llenarlas.\nProblemática\n\nColocar como pregunta, tipo, “¿Se puede blah …?”\n\nImportante plasmar las limitaciones.\nAcciones de negocio con los resultados\n\nCómo van a desplegar el modelo creado"
+  },
+  {
+    "objectID": "semana-01.html",
+    "href": "semana-01.html",
+    "title": "Semana 03/21",
+    "section": "",
+    "text": "Será necesario hacer un grupo con otros estudiantes del curso, con quienes se comparta afinidad de investigación, para el proyecto final del curso, el cual se irá desarrollando a lo largo del curso.\nPython y R son complementatios, no es que uno sea mejor que el otro.\nEn el curso, usaremos Python en su mayoría, pero también se compartirá, después de clase, el código análogo ,en R, de lo que trabajemos.\nEn la unidades 4 y 5, es donde más podremos contrastar el uso de Python y R. De esa manera, uno tendría más claro qué lenguaje escoger al momento de iniciar algún proyecto particular.\nFechas de laboratorio\n\n\n9 abril\n23 abril\n7 mayo\n11 junio\n25 junio\n\nLas dirigidas (perhaps a veces pcs) de IOP se me cruzan con todos los labs, excepto por el primero."
+  },
+  {
+    "objectID": "semana-01.html#metodología-kdd",
+    "href": "semana-01.html#metodología-kdd",
+    "title": "Semana 03/21",
+    "section": "Metodología KDD",
+    "text": "Metodología KDD\n\n¿Qué es un dato?\n\nEl dato es el valor de una característica/variable/atributo (edad, sexo, etc) de la población (población delimitada en espacio, tiempo, etc).\nProcesos paralelos\n\nVariable \\(\\Rightarrow\\) Variable aleatoria \\(\\Rightarrow\\) Dato\nPoblación \\(\\Rightarrow\\) Muestra \\(\\Rightarrow\\) Observación\n\nLa información parte de la unión de los datos recopilados.\n\nEs de utilidad para tomar decisiones.\nUn solo dato, por su cuenta, no nos da información.\n\nEl conocimiento es un conjunto de informaciones aplicadas, que permite preveer y planificar.\n\nLa información asociada a un contexto y una experiencia se convierte en conocimiento.\n\n\n\n\nDescripción de la metodología KDD\n\nKDD: Knowledge Discovery in Databases\nAlgunas definiciones:\n\n\nKnowledge Discovery in Databases is the non trivial process of identifying valid, novel, potentially useful, and utimately understandable patterns in data.\n\n\nNivel bajo de datos se refiere a datos que no nos dice nada, pero que podría servir para generar conocimiento a partir de estos datos.\n\n\n\nEtapas de la metodología KDD\n\nEsta metodología nos da pasos para cómo convertir datos en conocimiento.\nEstas etapas no son obligatorias … sirven de guía.\n\n\n\n\n\n\nEtapas de la metodología KDD\n\n\n\n\n\nEn la etapa selection, se reduce la cantidad de data, quedándonos con la data que nos va a servir para lograr el objetivo de nuestro análisis.\nImplica filtrar filas y/o columnas/variables de la data (entendida como data frame).\nRequiere el entendimiento del objetivo del análisis.\nLa parte de información surge en la etapa Patterns de la metodología KDD. Esa información requiere del bloque interpretation/evaluation (ver imagen) para convertirse en knowledge .\nEl paso de Transformed data a patterns es vía “Descriptive methods”.\n\n\n\n\n\n\nEtapas (más a detalle) de la metodología KDD\n\n\n\n\n\nLas flechas verticales indican que, a medida que avanzamos en las etapas, podemos volver al inicio para poder obtener nueva data que haya surgido la necesidad de requerir para el análisis.\nEl bloque Active DM (Data Mining) se refiere a que el proceso Data mining forma parte de TODO el proceso de 9 pasos (es otro enfoque).\nRegresar a cualquier paso es válido.\n\n\nPaso 1\n\nEs el paso principal.\nReunirse con los expertos del tema en que se va a trabajar. Se discuten cosas como\n\n¿Cómo sucede el fenómeno?\n¿Qué agentes intervienen con el fenómeno?\n¿Qué datos se recolectan (variables disponibles) o se pueden recolectar para el fenómeno?\n¿Para qué población se va a construir el proyecto?\n\nSe habla en lenguaje entendible para todos los expertos, no usando, por ejemplo, palabras particulares de Estadística.\nSe busca entender el negocio/problema.\nSe busca identificar la meta del proceso KDD desde la perspectiva del customer.\nEs más que nada un proceso cualitativo que servirá para formalizar el análisis futuro.\nEs recomendable crear una ficha resumen sobre este paso, donde se anota la información recopilada en la reunicón (o reuniones) con el customer.\n\nAsignar un experto del negocio como encargado del proyecto. Esta persona debe ir validando el avance del proyecto, en cada uno de los 9 pasos.\nAnotas una meta principal y las secundarias.\nUna vez completa esta ficha resumen es que podemos pasar al siguiente paso; debe redactarse, quedar como evidencia.\n\n\nPaso 2\n\nCreating a target data set.\nFiltramos la data para obtener un subconjunto, tanto en variables (columnas) y data samples (filas), al cual se le analizará durante pasos siguientes.\nNo se trata de la selección de variable que se realiza con código, por ejemplo la que busca explicar un fenómeno con las variables independientes.\nEsta selección no tiene que ver con la calidad de datos. Esa selección ocurrirá más adelante.\nFormalmente, estos filtros se realizan en base a criterios de inclusión/exclusión.\n\nPaso 3\n\nData cleaning and preprocessing.\nSe le dice también remover el ruido. Donde, el ruido hace referencia a los datos atípicos.\nSe ve la forma de trabajar los datos perdidos.\n\nPara construir un modelo, necesitamos lidiar primero con los datos perdidos.\nDependiendo del contexto, y requiriendo fundamento, se pueden imputar/reemplazar los datos vacíos por cero, la mediana de esa variable, etc.\nDesde el punto de vista de la profesora, máximo se debería imputar el 30% de los valores vacíos de una misma variable (que tiene varios valores vacíos). Pues, sino, se estaría trabajando con una variable ficticia, y podría así generar ruido en los resultados obtenidos.\nPero eso no es una regla. La decisión de imputación dependerá del contexto/fenómeno, y debe estar fundamentada numéricamente, además de tener sentido respecto al negocio.\n(Por ejemplo, si imputar una variable por cero tiene sentido en cierto contexto particular).\n\nDebido, en parte, a estas razones, es importante la comunicación constante con un experto del negocio.\n\nPaso 4\n\nData reduction and projection.\nLa transformación de la data debe suceder después de la limpieza de esta."
+  },
+  {
     "objectID": "laboratorio-01.html",
     "href": "laboratorio-01.html",
     "title": "Laboratorio 01",
@@ -110,33 +236,5 @@
     "title": "Paralelismo Python R",
     "section": "Semana 04/04",
     "text": "Semana 04/04\ndf.shape\ndim(df)\n\ndf.head() \nhead(df)\n\npd.read_csv(\"file.csv\")\nread.csv(\"file.csv\")\n\ndf.dtypes \nstr(df)\n\n# More precise alternative\nsapply(df,class)\n\ndf.describe()\nskimr::skim(df)\n\ndf.nombre_columna \ndf$nombre_columna\n\nvariable.astype(variable_type)\n\n# Example\nx.astype('float') \nas.variable_type(variable)\n\n# Example\nas.numeric(x)\n\ndf.drop_duplicates(inplace=True) \ndf <- dplyr::distinct(df, .keep_all = TRUE)\n\ndf.drop_duplicates(subset =\"column_name\", inplace = True)\ndf <- df %>% dplyr::distinct(column_name, .keep_all = TRUE)\n\ndf.sort_values(by=['column_name'], inplace=True, ascending = False)\ndf <- df %>% arrange(desc(column_name))\n\ndf.dropna(inplace=True) \ndf <- na.omit(df)\n\ndf2 = pd.DataFrame(df.isnull().sum())\n# Aplicar una misma función a cada columna de un data frame\n# (plus some other stuff)\ndf2 <- data.frame(\n  t(summarise_all(data.frame(is.na(df)), sum))\n)\n\ndf2 = df.groupby([\"column_name_1\"])\ndf2 = df2[\"column_name_2\"].std() / df2[\"column_name_2\"].mean()\ndf2.sort_values()\ndf2 <- df %>% \n  group_by(column_name_1) %>%\n  summarize(some_name = sd(column_name_2) / mean(column_name_2)) %>%\n  arrange(some_name)\n\nnumpy.mean(df[\"column_name\"])\nmean(df[\"column_name\"])\n\ndf[\"column_name\"].median() \nmedian(df[\"column_name\"])\n\ndf[\"column_name\"].quantile([0.25, 0.50, 0.75]) \nquantile(df[\"column_name\"], c(0.25, 0.50, 0.75))\n\ndf[\"column_name\"].min() \nmin(df[\"column_name\"])\n\ndf[\"column_name\"].max() \nmax(df[\"column_name\"])\n\n(df[\"column_name\"].quantile([0.75])).values - (df[\"column_name\"].quantile([0.25])).values \nIQR(df[\"column_name\"])\n\ndf[\"column_name\"].var() \nvar(df[\"column_name\"])\n\ndf[\"column_name\"].std() \nsd(df[\"column_name\"])\n\ndf2 = df[[\"column_name_1\", \"column_name_2\"]].std() / df[[\"column_name_1\", \"column_name_2\"]].mean()\ndf2 <- df %>%\n  summarize(\n    across(\n      c(column_name_1, column_name_2),\n      function(x) { sd(x) / mean(x) }\n    )\n  ) \n\n# Coeficientes de deformación\ndf['column_name'].skew()\ndf['column_name'].kurt()\nmoments::skewness(df['column_name'])\nmoments::kurtosis(df['column_name'])\n\ndf.column_name.unique()\nunique(df$column_name)"
-  },
-  {
-    "objectID": "semana-05.html",
-    "href": "semana-05.html",
-    "title": "Semana 05/27",
-    "section": "",
-    "text": "No existe mejor metodología per se. Sea KDD o lo que sea; en esencia, todas las metodología dicen lo mismo."
-  },
-  {
-    "objectID": "semana-05.html#step-5-data-mining",
-    "href": "semana-05.html#step-5-data-mining",
-    "title": "Semana 05/27",
-    "section": "Step 5: Data Mining",
-    "text": "Step 5: Data Mining\nObjetivo: Choosing the suitable Data Mining task\nEn este paso, ya tenemos los datos limpios, transformados, sin vacíos ni outliers.\n\nDebemos escoger alguna de las siguientes tareas:\n\nPredecir\nDescribir\nOptimizar\n\n\n\nPredicción\nUsamos variables específicas del dataset para predecir valores desconocidos o futuros de una o varias variable(s) (numérica(s) o categórica(s)) de interés.\n\nTipos:\n\nClassification\nRegression\nclassifier ensembles\n\n\n\n\nDescriptivo\nAnalizamos eventos pasados para entender el presente (no el futuro). No necesariamente busca predecir valores,\n\nTipos:\n\nAssociation Mining\nClustering\nAnomaly Detection\nRough Sets Analysis\n\n\n\n\nOptimización\nPermite mejorar el rendimiento de un proceso sujeto a restricciones.\n\n\nAprendizaje supervisado\n\nLa data es pre categorizada o numérica.\nRequiere de un target, nombre de la variable objetivo.\nIncluye modelos de clasificación y regresión.\n\n\n\nAprendizaje no supervisado\n\nLa data no está labelled en alguna manera.\nIncluye clustering, dimension reduction y association.\nDimension reduction suele usarse solo para variables numéricas.\nNo siempre es necesario aplicar reducción de dimensiones. Pero, en un caso como dataset tiene muchas columnas y pocas filas, sí debe aplicarse.\nLa reducción de dimensiones suele aplicarse en dos casos excluyentes:\n\nMuchas variables (para paso transformación)\n\nCompara la esencia de las variables.\n\nVariables correlacionadas (para paso data mining)\n\nNo tiene sentido aplicar ambos casos de reducción de dimensiones para una misma data.\n\n\n\nReinforcement Learning"
-  },
-  {
-    "objectID": "semana-05.html#step-6",
-    "href": "semana-05.html#step-6",
-    "title": "Semana 05/27",
-    "section": "Step 6:",
-    "text": "Step 6:\nFALTA PEGAR PICS DEL PDF EDITADO POR SENSEI\n\nPara modelos de regresión, es importante usar varios algoritmos de ese tipo y comparar sus resultados."
-  },
-  {
-    "objectID": "semana-05.html#step-7-métodos-de-clasificación",
-    "href": "semana-05.html#step-7-métodos-de-clasificación",
-    "title": "Semana 05/27",
-    "section": "Step 7: Métodos de clasificación",
-    "text": "Step 7: Métodos de clasificación\n\nSe utiliza en análisis supervisado para target categórico.\nClasificar hace referencia a predecir un target categórico.\n\n\nÁrboles de clasificación\n\nknitr::include_graphics(\"images/arbol-de-clasificacion.png\")\n\n\n\n\n\nRoot node\nVariable que discrimina mejor las categorías de Y.\nCada fila del árbola consiste del 100%\n\n\nÁrbol cart\n\n\nÁrbol chaid\n\n\n\nRegresión logística\n\nRegresión para target binario\n\n\nRegresión logística multinomial\n\n\n\nKNN\nSe basa en la proximidad de las instancias.\nClasifica instancias según categoría de K-vecinos.\n\n\nSVM\nClasifica instancias según frontera de desición.\nMaximiza la menor distancia a la frontera."
   }
 ]

@@ -3,7 +3,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="quarto-0.9.180">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>1INF03 - Análisis de Datos - Semana</title>
+  <title>1INF03 - Análisis de Datos - Semana 05/27</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -83,8 +83,8 @@
   <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
   <script src="site_libs/quarto-search/fuse.min.js"></script>
   <script src="site_libs/quarto-search/quarto-search.js"></script>
-  <link href="./semana-04.html" rel="next">
-  <link href="./semana-06.html" rel="prev">
+  <link href="./semana-06.html" rel="next">
+  <link href="./semana-09.html" rel="prev">
   <script src="site_libs/quarto-html/quarto.js"></script>
   <script src="site_libs/quarto-html/popper.min.js"></script>
   <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -113,7 +113,6 @@
       "search-submit-button-title": "Submit"
     }
   }</script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
@@ -123,7 +122,7 @@
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Semana</h1>
+      <h1 class="quarto-secondary-nav-title">Semana 05/27</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -170,7 +169,7 @@
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./semana-08.html" class="sidebar-item-text sidebar-link">Semana 05/27</a>
+  <a href="./semana-08.html" class="sidebar-item-text sidebar-link active">Semana 05/27</a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -180,7 +179,7 @@
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./semana-05.html" class="sidebar-item-text sidebar-link active">Semana</a>
+  <a href="./semana-05.html" class="sidebar-item-text sidebar-link">Semana</a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -248,18 +247,23 @@
         <nav id="TOC" role="doc-toc">
 <h2 id="toc-title">Tabla de Contenidos</h2>
 <ul>
-<li><a href="#tratamiento-de-vacíos" class="nav-link active" data-scroll-target="#tratamiento-de-vacíos">Tratamiento de vacíos</a>
+<li><a href="#step-5-data-mining" class="nav-link active" data-scroll-target="#step-5-data-mining">Step 5: Data Mining</a>
 <ul class="collapse">
-<li><a href="#imputación-de-vacíos-por-variables-numéricas" class="nav-link" data-scroll-target="#imputación-de-vacíos-por-variables-numéricas">Imputación de vacíos por variables numéricas</a></li>
+<li><a href="#predicción" class="nav-link" data-scroll-target="#predicción">Predicción</a></li>
+<li><a href="#descriptivo" class="nav-link" data-scroll-target="#descriptivo">Descriptivo</a></li>
+<li><a href="#optimización" class="nav-link" data-scroll-target="#optimización">Optimización</a></li>
+<li><a href="#aprendizaje-supervisado" class="nav-link" data-scroll-target="#aprendizaje-supervisado">Aprendizaje supervisado</a></li>
+<li><a href="#aprendizaje-no-supervisado" class="nav-link" data-scroll-target="#aprendizaje-no-supervisado">Aprendizaje no supervisado</a></li>
+<li><a href="#reinforcement-learning" class="nav-link" data-scroll-target="#reinforcement-learning">Reinforcement Learning</a></li>
 </ul></li>
-<li><a href="#estandarización" class="nav-link" data-scroll-target="#estandarización">Estandarización</a></li>
-<li><a href="#normalización" class="nav-link" data-scroll-target="#normalización">Normalización</a></li>
-<li><a href="#discretización" class="nav-link" data-scroll-target="#discretización">Discretización</a>
+<li><a href="#step-6" class="nav-link" data-scroll-target="#step-6">Step 6:</a></li>
+<li><a href="#step-7-métodos-de-clasificación" class="nav-link" data-scroll-target="#step-7-métodos-de-clasificación">Step 7: Métodos de clasificación</a>
 <ul class="collapse">
-<li><a href="#caso-misma-amplitud-y-diferente-frecuencia" class="nav-link" data-scroll-target="#caso-misma-amplitud-y-diferente-frecuencia">Caso misma amplitud y diferente frecuencia</a></li>
-<li><a href="#caso-misma-frecuencia-y-diferente-amplitud" class="nav-link" data-scroll-target="#caso-misma-frecuencia-y-diferente-amplitud">Caso misma frecuencia y diferente amplitud</a></li>
+<li><a href="#árboles-de-clasificación" class="nav-link" data-scroll-target="#árboles-de-clasificación">Árboles de clasificación</a></li>
+<li><a href="#regresión-logística" class="nav-link" data-scroll-target="#regresión-logística">Regresión logística</a></li>
+<li><a href="#knn" class="nav-link" data-scroll-target="#knn">KNN</a></li>
+<li><a href="#svm" class="nav-link" data-scroll-target="#svm">SVM</a></li>
 </ul></li>
-<li><a href="#variables-dummies" class="nav-link" data-scroll-target="#variables-dummies">Variables dummies</a></li>
 </ul>
 </nav>
     </div>
@@ -267,85 +271,149 @@
 <main class="content column-body" id="quarto-document-content">
 <header id="title-block-header" class="quarto-title-block default">
 
-<div class="quarto-title"><h1 class="title d-none d-lg-block display-7">Semana</h1></div></header>
+<div class="quarto-title"><h1 class="title d-none d-lg-block display-7">Semana 05/27</h1></div></header>
 
-<p><strong>Se recomienda hacer un script por paso KDD</strong></p>
-<section id="tratamiento-de-vacíos" class="level2">
-<h2 class="anchored" data-anchor-id="tratamiento-de-vacíos">Tratamiento de vacíos</h2>
-<p>En el caso que se eliminen datos vacíos, es más dropear a filas del dataset que contengan <strong>al menos un</strong> dato vacío, en vez de requerir que <strong>toda una fila este compuesta por vacíos</strong> para decidir eliminar tal fila.</p>
-<section id="imputación-de-vacíos-por-variables-numéricas" class="level3">
-<h3 class="anchored" data-anchor-id="imputación-de-vacíos-por-variables-numéricas">Imputación de vacíos por variables numéricas</h3>
-<section id="imputar-con-ceros" class="level4">
-<h4 class="anchored" data-anchor-id="imputar-con-ceros">Imputar con ceros</h4>
-<p><code>df["variable_numerica"].fillna(0, inplace=True)</code></p>
 <ul>
-<li><p>Es muy utilizada, pero puede ser peligrosa.</p></li>
-<li><p>Si el rango de la variable no incluye cero, no tendría sentido imputar por cero.</p></li>
+<li><strong>No existe mejor metodología</strong> per se. Sea KDD o lo que sea; en esencia, todas las metodología dicen lo mismo.</li>
+</ul>
+<section id="step-5-data-mining" class="level2">
+<h2 class="anchored" data-anchor-id="step-5-data-mining">Step 5: Data Mining</h2>
+<p>Objetivo: <strong>Choosing the suitable Data Mining task</strong></p>
+<p>En este paso, ya tenemos los datos limpios, transformados, sin vacíos ni outliers.</p>
+<ul>
+<li>Debemos escoger alguna de las siguientes tareas:
+<ul>
+<li>Predecir</li>
+<li>Describir</li>
+<li>Optimizar</li>
+</ul></li>
+</ul>
+<section id="predicción" class="level3">
+<h3 class="anchored" data-anchor-id="predicción">Predicción</h3>
+<p>Usamos variables específicas del dataset para predecir valores desconocidos o futuros de una o varias variable(s) (numérica(s) o categórica(s)) de interés.</p>
+<ul>
+<li>Tipos:
+<ul>
+<li>Classification</li>
+<li>Regression</li>
+<li>classifier ensembles</li>
+</ul></li>
 </ul>
 </section>
-<section id="imputar-vía-forward-propagation" class="level4">
-<h4 class="anchored" data-anchor-id="imputar-vía-forward-propagation">Imputar vía <em>forward propagation</em></h4>
+<section id="descriptivo" class="level3">
+<h3 class="anchored" data-anchor-id="descriptivo">Descriptivo</h3>
+<p>Analizamos <strong>eventos pasados</strong> para <strong>entender el presente</strong> (no el futuro). No necesariamente busca predecir valores,</p>
 <ul>
-<li><p>La data a ser imputada requiere tener un orden (no trivial) preestablecido.</p></li>
-<li><p>Los vacíos se complentan con el valor previo o posterior al nulo.</p></li>
-</ul>
-<p><code>df["variable_num_o_cat"]fillna(method = "pad")</code></p>
-</section>
-<section id="imputar-con-la-media-de-la-variable-numérica" class="level4">
-<h4 class="anchored" data-anchor-id="imputar-con-la-media-de-la-variable-numérica">Imputar con la <em>media</em> de la variable numérica</h4>
-<p><code>df_sin_outlier["var_num"] = df_sin_outlier["var_num"].fillna(df_sin_outlier["var_num"].mean())</code>]`</p>
-</section>
-<section id="imputar-vía-modelo-knnimputer" class="level4">
-<h4 class="anchored" data-anchor-id="imputar-vía-modelo-knnimputer">Imputar vía modelo <em>KNNImputer</em></h4>
+<li>Tipos:
 <ul>
-<li>Este modelo solo se aplica para variables numéricas, e imputa la media respecto a <em>vecinos</em>.</li>
-</ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.impute <span class="im">import</span> KNNImputer</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>imputer <span class="op">=</span> KNNImputer(n_neighbors <span class="op">=</span> <span class="dv">3</span>, weights <span class="op">=</span> <span class="st">"uniform"</span>)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>imputer.fit(df_sin_outlier[[<span class="st">'var1'</span>, <span class="st">'var2'</span>]])</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>df_sin_outlier[[<span class="st">'var1'</span>, <span class="st">'var2'</span>]] <span class="op">=</span> imputer.transform(df_sin_outlier[[<span class="st">'var1'</span>, <span class="st">'var2'</span>]])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="imputar-vía-modelo-iterativeimputer" class="level4">
-<h4 class="anchored" data-anchor-id="imputar-vía-modelo-iterativeimputer">Imputar vía modelo <em>IterativeImputer</em></h4>
-<ul>
-<li><p>Por cada variable por imputar, contruye un modelo. Cada modelo usa solo los datos completos para predecir a la data vacía.</p></li>
-<li><p><strong>La imputación se realiza en base a varias variables</strong>.</p></li>
+<li>Association Mining</li>
+<li>Clustering</li>
+<li>Anomaly Detection</li>
+<li>Rough Sets Analysis</li>
+</ul></li>
 </ul>
 </section>
+<section id="optimización" class="level3">
+<h3 class="anchored" data-anchor-id="optimización">Optimización</h3>
+<p>Permite <strong>mejorar el rendimiento</strong> de un proceso <strong>sujeto a restricciones</strong>.</p>
 </section>
-</section>
-<section id="estandarización" class="level2">
-<h2 class="anchored" data-anchor-id="estandarización">Estandarización</h2>
-<p><span class="math display">\[ (X - \bar{X}) / \text{ sd} \left( X \right)\]</span></p>
-<p>Nos permite rescatar la esencia de la variable, <strong>sin necesidad de las unidades de medida</strong>.</p>
-</section>
-<section id="normalización" class="level2">
-<h2 class="anchored" data-anchor-id="normalización">Normalización</h2>
-<p><span class="math display">\[(X - X_{min}) / (X_{max} - X_{min})\]</span></p>
-</section>
-<section id="discretización" class="level2">
-<h2 class="anchored" data-anchor-id="discretización">Discretización</h2>
+<section id="aprendizaje-supervisado" class="level3">
+<h3 class="anchored" data-anchor-id="aprendizaje-supervisado">Aprendizaje supervisado</h3>
 <ul>
-<li>Consiste en la conversión de una variable numérica a categórica.</li>
+<li><p>La data es pre categorizada o numérica.</p></li>
+<li><p>Requiere de un <strong>target</strong>, nombre de la variable objetivo.</p></li>
+<li><p>Incluye modelos de clasificación y regresión.</p></li>
 </ul>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>datos[<span class="st">'bin_age'</span>] <span class="op">=</span> pd.cut(df.age, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<section id="caso-misma-amplitud-y-diferente-frecuencia" class="level3">
-<h3 class="anchored" data-anchor-id="caso-misma-amplitud-y-diferente-frecuencia">Caso misma amplitud y diferente frecuencia</h3>
 </section>
-<section id="caso-misma-frecuencia-y-diferente-amplitud" class="level3">
-<h3 class="anchored" data-anchor-id="caso-misma-frecuencia-y-diferente-amplitud">Caso misma frecuencia y diferente amplitud</h3>
-</section>
-</section>
-<section id="variables-dummies" class="level2">
-<h2 class="anchored" data-anchor-id="variables-dummies">Variables dummies</h2>
+<section id="aprendizaje-no-supervisado" class="level3">
+<h3 class="anchored" data-anchor-id="aprendizaje-no-supervisado">Aprendizaje no supervisado</h3>
 <ul>
-<li>Estas producen variables de 0 y 1 para variables categóricas.</li>
+<li><p>La data no está labelled en alguna manera.</p></li>
+<li><p>Incluye clustering, dimension reduction y association.</p></li>
+<li><p>Dimension reduction suele usarse solo para variables numéricas.</p></li>
+<li><p><strong>No siempre es necesario aplicar reducción</strong> <strong>de dimensiones</strong>. Pero, en un caso como <strong>dataset tiene muchas columnas y pocas filas</strong>, sí debe aplicarse.</p></li>
+<li><p>La reducción de dimensiones suele aplicarse en dos casos excluyentes:</p>
+<ul>
+<li>Muchas variables (para paso transformación)
+<ul>
+<li>Compara la esencia de las variables.</li>
+</ul></li>
+<li>Variables correlacionadas (para paso data mining)</li>
+</ul></li>
+<li><p>No tiene sentido aplicar ambos casos de reducción de dimensiones para una misma data.</p></li>
 </ul>
+</section>
+<section id="reinforcement-learning" class="level3">
+<h3 class="anchored" data-anchor-id="reinforcement-learning">Reinforcement Learning</h3>
+</section>
+</section>
+<section id="step-6" class="level2">
+<h2 class="anchored" data-anchor-id="step-6">Step 6:</h2>
+<p>FALTA PEGAR PICS DEL PDF EDITADO POR SENSEI</p>
+<ul>
+<li>Para modelos de regresión, es importante usar varios algoritmos de ese tipo y comparar sus resultados.</li>
+</ul>
+</section>
+<section id="step-7-métodos-de-clasificación" class="level2">
+<h2 class="anchored" data-anchor-id="step-7-métodos-de-clasificación">Step 7: Métodos de clasificación</h2>
+<ul>
+<li><p>Se utiliza en análisis supervisado para target <strong>categórico</strong>.</p></li>
+<li><p><strong>Clasificar</strong> hace referencia a <strong>predecir</strong> un target categórico.</p></li>
+</ul>
+<section id="árboles-de-clasificación" class="level3">
+<h3 class="anchored" data-anchor-id="árboles-de-clasificación">Árboles de clasificación</h3>
+<div class="cell">
+<div class="sourceCode" id="cb1"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"images/arbol-de-clasificacion.png"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="images/arbol-de-clasificacion.png" class="img-fluid" width="470"></p>
+</div>
+</div>
+<ul>
+<li><p><strong>Root node</strong><br>
+Variable que discrimina mejor las categorías de Y.</p></li>
+<li><p>Cada fila del árbola consiste del 100% de los datos.</p></li>
+<li><p>Se busca tomar una rama que tenga la <strong>mayor purez</strong> y <strong>mayor cantidad de elementos.</strong></p></li>
+</ul>
+<section id="árbol-cart" class="level4">
+<h4 class="anchored" data-anchor-id="árbol-cart">Árbol CART</h4>
+<ul>
+<li>Variable dependiente: categórica o numérica (árbol de regresión)</li>
+<li>Variables independientes: discretas o continuas</li>
+<li>Se basa en el cálculo de GINI o F-Test.</li>
+</ul>
+<p>El <strong>índice de GINI</strong> busca cuantificar la pureza de la discriminación/separación de categorías de Y .</p>
+</section>
+<section id="árbol-chaid" class="level4">
+<h4 class="anchored" data-anchor-id="árbol-chaid">Árbol CHAID</h4>
+<ul>
+<li>Variable dependiente: Categórica</li>
+<li>Variables independientes: Todas deben ser discretizadas (convertidas en categorías).</li>
+<li>Se basa en el cálculo de Chi-cuadrado.</li>
+</ul>
+</section>
+</section>
+<section id="regresión-logística" class="level3">
+<h3 class="anchored" data-anchor-id="regresión-logística">Regresión logística</h3>
+<section id="regresión-para-target-binario" class="level4">
+<h4 class="anchored" data-anchor-id="regresión-para-target-binario">Regresión para target binario</h4>
+</section>
+<section id="regresión-logística-multinomial" class="level4">
+<h4 class="anchored" data-anchor-id="regresión-logística-multinomial">Regresión logística multinomial</h4>
+</section>
+</section>
+<section id="knn" class="level3">
+<h3 class="anchored" data-anchor-id="knn">KNN</h3>
+<p>Se basa en la proximidad de las instancias.</p>
+<p>Clasifica instancias según categoría de K-vecinos.</p>
+</section>
+<section id="svm" class="level3">
+<h3 class="anchored" data-anchor-id="svm">SVM</h3>
+<p>Clasifica instancias según frontera de desición.</p>
+<p>Maximiza la menor distancia a la frontera.</p>
 
 
 
+</section>
 </section>
 </main> <!-- /main -->
 <script>
@@ -443,12 +511,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation column-body">
   <div class="nav-page nav-page-previous">
-      <a href="./semana-06.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Semana</span>
+      <a href="./semana-09.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Semana 06/03</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./semana-04.html" class="pagination-link">
+      <a href="./semana-06.html" class="pagination-link">
         <span class="nav-page-text">Semana</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>

@@ -3,7 +3,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="quarto-0.9.180">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>1INF03 - Análisis de Datos - Semana 03/21</title>
+  <title>1INF03 - Análisis de Datos - Semana</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -20,8 +20,8 @@
   <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
   <script src="site_libs/quarto-search/fuse.min.js"></script>
   <script src="site_libs/quarto-search/quarto-search.js"></script>
-  <link href="./laboratorio-01.html" rel="next">
-  <link href="./semana-02.html" rel="prev">
+  <link href="./semana-03.html" rel="next">
+  <link href="./semana-05.html" rel="prev">
   <script src="site_libs/quarto-html/quarto.js"></script>
   <script src="site_libs/quarto-html/popper.min.js"></script>
   <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -50,7 +50,6 @@
       "search-submit-button-title": "Submit"
     }
   }</script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
@@ -60,7 +59,7 @@
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Semana 03/21</h1>
+      <h1 class="quarto-secondary-nav-title">Semana</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -122,7 +121,7 @@
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./semana-04.html" class="sidebar-item-text sidebar-link">Semana</a>
+  <a href="./semana-04.html" class="sidebar-item-text sidebar-link active">Semana</a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -137,7 +136,7 @@
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./semana-01.html" class="sidebar-item-text sidebar-link active">Semana 03/21</a>
+  <a href="./semana-01.html" class="sidebar-item-text sidebar-link">Semana 03/21</a>
   </div>
 </li>
     </ul>
@@ -185,12 +184,10 @@
         <nav id="TOC" role="doc-toc">
 <h2 id="toc-title">Tabla de Contenidos</h2>
 <ul>
-<li><a href="#metodología-kdd" class="nav-link active" data-scroll-target="#metodología-kdd">Metodología KDD</a>
-<ul class="collapse">
-<li><a href="#qué-es-un-dato" class="nav-link" data-scroll-target="#qué-es-un-dato">¿Qué es un dato?</a></li>
-<li><a href="#descripción-de-la-metodología-kdd" class="nav-link" data-scroll-target="#descripción-de-la-metodología-kdd">Descripción de la metodología KDD</a></li>
-<li><a href="#etapas-de-la-metodología-kdd" class="nav-link" data-scroll-target="#etapas-de-la-metodología-kdd">Etapas de la metodología KDD</a></li>
-</ul></li>
+<li><a href="#omitir-duplicados" class="nav-link active" data-scroll-target="#omitir-duplicados">Omitir duplicados</a></li>
+<li><a href="#tipos-de-variables" class="nav-link" data-scroll-target="#tipos-de-variables">Tipos de variables</a></li>
+<li><a href="#imputación-de-atípicos" class="nav-link" data-scroll-target="#imputación-de-atípicos">Imputación de atípicos</a></li>
+<li><a href="#imputación-de-vacíos" class="nav-link" data-scroll-target="#imputación-de-vacíos">Imputación de vacíos</a></li>
 </ul>
 </nav>
     </div>
@@ -198,151 +195,40 @@
 <main class="content column-body" id="quarto-document-content">
 <header id="title-block-header" class="quarto-title-block default">
 
-<div class="quarto-title"><h1 class="title d-none d-lg-block display-7">Semana 03/21</h1></div></header>
+<div class="quarto-title"><h1 class="title d-none d-lg-block display-7">Semana</h1></div></header>
 
 <ul>
-<li><p>Será necesario hacer un grupo con otros estudiantes del curso, con quienes se comparta afinidad de investigación, para el proyecto final del curso, el cual se irá desarrollando a lo largo del curso.</p></li>
-<li><p>Python y R son complementatios, no es que uno sea <em>mejor</em> que el otro.</p></li>
-<li><p>En el curso, usaremos Python en su mayoría, pero también se compartirá, después de clase, el código análogo ,en R, de lo que trabajemos.</p></li>
-<li><p>En la unidades 4 y 5, es donde más podremos contrastar el uso de Python y R. De esa manera, uno tendría más claro qué lenguaje escoger al momento de iniciar algún proyecto particular.</p></li>
-<li><p>Fechas de laboratorio<br>
-</p>
-<ul>
-<li>9 abril</li>
-<li>23 abril</li>
-<li>7 mayo</li>
-<li>11 junio</li>
-<li>25 junio</li>
-</ul></li>
-<li><p><strong>Las dirigidas (perhaps a veces pcs)</strong> <strong>de IOP se me cruzan con todos los labs</strong>, <strong>excepto por el primero.</strong></p></li>
+<li>Usaremos la librería pyreadstat para cargar .sav files.</li>
 </ul>
-<section id="metodología-kdd" class="level2">
-<h2 class="anchored" data-anchor-id="metodología-kdd">Metodología KDD</h2>
-<section id="qué-es-un-dato" class="level3">
-<h3 class="anchored" data-anchor-id="qué-es-un-dato">¿Qué es un dato?</h3>
-<ul>
-<li><p>El dato es el valor de una característica/variable/atributo (edad, sexo, etc) de la población (población delimitada en espacio, tiempo, etc).</p></li>
-<li><p>Procesos paralelos</p></li>
-</ul>
-<p>Variable <span class="math inline">\(\Rightarrow\)</span> Variable aleatoria <span class="math inline">\(\Rightarrow\)</span> Dato</p>
-<p>Población <span class="math inline">\(\Rightarrow\)</span> Muestra <span class="math inline">\(\Rightarrow\)</span> Observación</p>
-<ul>
-<li>La <strong>información</strong> parte de la unión de los datos recopilados.
-<ul>
-<li>Es de utilidad para tomar decisiones.</li>
-<li>Un solo dato, por su cuenta, no nos da información.</li>
-</ul></li>
-<li>El <strong>conocimiento</strong> es un conjunto de informaciones aplicadas, que permite preveer y planificar.
-<ul>
-<li>La información asociada a un <strong>contexto</strong> y una <strong>experiencia</strong> se convierte en conocimiento.</li>
-</ul></li>
-</ul>
+<section id="omitir-duplicados" class="level2">
+<h2 class="anchored" data-anchor-id="omitir-duplicados">Omitir duplicados</h2>
+<p>A veces se puede tratar duplicados, tipo para estudio a lo largo del tiempo (como varias visitas del paciente).</p>
 </section>
-<section id="descripción-de-la-metodología-kdd" class="level3">
-<h3 class="anchored" data-anchor-id="descripción-de-la-metodología-kdd">Descripción de la metodología KDD</h3>
-<ul>
-<li><p>KDD: Knowledge Discovery in Databases</p></li>
-<li><p>Algunas definiciones:</p></li>
-</ul>
-<blockquote class="blockquote">
-<p>Knowledge Discovery in Databases is the non trivial process of identifying valid, novel, potentially useful, and utimately understandable patterns in data.</p>
-</blockquote>
-<ul>
-<li><em>Nivel bajo de datos</em> se refiere a datos que no nos dice nada, pero que podría servir para generar conocimiento a partir de estos datos.</li>
-</ul>
+<section id="tipos-de-variables" class="level2">
+<h2 class="anchored" data-anchor-id="tipos-de-variables">Tipos de variables</h2>
+<p>Las variables numéricas, a las cuales calcularemos media, mediana, etc, deben tener ese tipo en la data. Así, info como DNI se debería convertir en <strong>object</strong> o <strong>string</strong>.</p>
+<p>Tipo <strong>string</strong> es caso particular de dato <strong>object</strong>. Así que es recomendable pasar las variables categóricas a <strong>string</strong>.</p>
+<p><strong> La conversión de tipo de datos no debe generar pérdida de vacíos. El tratamiento de los vacíos se realizará más adelante. </strong></p>
 </section>
-<section id="etapas-de-la-metodología-kdd" class="level3">
-<h3 class="anchored" data-anchor-id="etapas-de-la-metodología-kdd">Etapas de la metodología KDD</h3>
-<ul>
-<li><p>Esta metodología nos da pasos para cómo convertir <strong>datos</strong> en <strong>conocimiento</strong>.</p></li>
-<li><p>Estas etapas no son obligatorias … sirven de <strong>guía</strong>.</p></li>
-</ul>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/etapas-metodologia-kdd.png" class="img-fluid figure-img" width="546"></p>
-<p></p><figcaption aria-hidden="true" class="figure-caption">Etapas de la metodología KDD</figcaption><p></p>
-</figure>
-</div>
-</div>
-</div>
-<ul>
-<li><p>En la etapa <strong>selection</strong>, se reduce la cantidad de data, quedándonos con la data que <strong>nos va a servir</strong> para lograr el objetivo de nuestro análisis.<br>
-Implica filtrar filas y/o columnas/variables de la data (entendida como data frame).<br>
-Requiere el entendimiento del objetivo del análisis.</p></li>
-<li><p>La parte de información surge en la etapa <strong>Patterns</strong> de la metodología KDD. Esa información requiere del bloque <em>interpretation/evaluation</em> (ver imagen) para convertirse en <strong>knowledge</strong> .</p></li>
-<li><p>El paso de <strong>Transformed data</strong> a patterns es vía “Descriptive methods”.</p></li>
-</ul>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/etapas-metodologia-kdd-2.png" class="img-fluid figure-img" width="457"></p>
-<p></p><figcaption aria-hidden="true" class="figure-caption">Etapas (más a detalle) de la metodología KDD</figcaption><p></p>
-</figure>
-</div>
-</div>
-</div>
-<ul>
-<li><p>Las flechas verticales indican que, a medida que avanzamos en las etapas, podemos volver al inicio para poder obtener nueva data que haya surgido la necesidad de requerir para el análisis.</p></li>
-<li><p>El bloque <strong>Active DM (Data Mining)</strong> se refiere a que el proceso <em>Data mining</em> forma parte de TODO el proceso de 9 pasos (es otro enfoque).<br>
-<strong>Regresar a cualquier paso es válido</strong>.</p></li>
-</ul>
-<ol type="1">
-<li>Paso 1
-<ul>
-<li><strong>Es el paso principal</strong>.</li>
-<li>Reunirse con los expertos del tema en que se va a trabajar. Se discuten cosas como
-<ul>
-<li>¿Cómo sucede el fenómeno?</li>
-<li>¿Qué agentes intervienen con el fenómeno?</li>
-<li>¿Qué datos se recolectan (variables disponibles) o se pueden recolectar para el fenómeno?</li>
-<li>¿Para qué población se va a construir el proyecto?</li>
-</ul></li>
-<li>Se habla en lenguaje entendible para todos los expertos, no usando, por ejemplo, palabras particulares de Estadística.</li>
-<li>Se busca <strong>entender el negocio/problema</strong>.</li>
-<li>Se busca identificar la <strong>meta</strong> del proceso KDD desde la perspectiva del <strong>customer</strong>.</li>
-<li>Es más que nada un proceso <em>cualitativo</em> que servirá para formalizar el análisis futuro.</li>
-<li>Es recomendable crear una ficha resumen sobre este paso, donde se anota la información recopilada en la reunicón (o reuniones) con el customer.
-<ul>
-<li>Asignar un experto del negocio como encargado del proyecto. Esta persona debe ir validando el avance del proyecto, en cada uno de los 9 pasos.</li>
-<li>Anotas una meta principal y las secundarias.</li>
-<li>Una vez completa esta ficha resumen es que podemos pasar al siguiente paso; debe redactarse, quedar como evidencia.</li>
-</ul></li>
-</ul></li>
-<li>Paso 2
-<ul>
-<li><strong>Creating a target data set</strong>.</li>
-<li>Filtramos la data para obtener un subconjunto, tanto en variables (columnas) y data samples (filas), al cual se le analizará durante pasos siguientes.</li>
-<li>No se trata de la selección de variable que se realiza con código, por ejemplo la que busca explicar un fenómeno con las variables <em>independientes</em>.</li>
-<li>Esta selección <strong>no</strong> tiene que ver con la <strong>calidad de datos.</strong> Esa selección ocurrirá más adelante.</li>
-<li>Formalmente, estos filtros se realizan en base a <strong>criterios de inclusión/exclusión</strong>.</li>
-</ul></li>
-<li>Paso 3
-<ul>
-<li><strong>Data cleaning and preprocessing</strong>.</li>
-<li>Se le dice también <em>remover el ruido</em>. Donde, el <em>ruido</em> hace referencia a los <strong>datos atípicos</strong>.</li>
-<li>Se ve la forma de trabajar los <em>datos perdidos</em>.
-<ul>
-<li>Para construir un modelo, necesitamos lidiar primero con los datos perdidos.</li>
-<li>Dependiendo del contexto, y requiriendo fundamento, se pueden imputar/reemplazar los datos vacíos por <strong>cero</strong>, <strong>la mediana de esa variable</strong>, etc.</li>
-<li>Desde el punto de vista de la profesora, máximo se debería imputar el 30% de los valores vacíos de una misma variable (que tiene varios valores vacíos). Pues, sino, se estaría trabajando con una variable <em>ficticia</em>, y podría así generar ruido en los resultados obtenidos.<br>
-Pero eso <strong>no es una regla</strong>. La decisión de imputación dependerá del contexto/fenómeno, y debe estar fundamentada <strong>numéricamente</strong>, además de tener sentido respecto al negocio.<br>
-(Por ejemplo, si imputar una variable por cero tiene sentido en cierto contexto particular).</li>
-</ul></li>
-<li>Debido, en parte, a estas razones, es importante la comunicación constante con un experto del negocio.</li>
-</ul></li>
-<li>Paso 4
-<ul>
-<li><strong>Data reduction and projection</strong>.</li>
-<li><strong>La transformación de la data debe suceder</strong> <strong>después de la limpieza de esta</strong>.</li>
-</ul></li>
-</ol>
-
-
-
+<section id="imputación-de-atípicos" class="level2">
+<h2 class="anchored" data-anchor-id="imputación-de-atípicos">Imputación de atípicos</h2>
+<p><strong> Las imputaciones deben alterar lo menos posible a la distribución de la data. Las comparaciones podemos hacerla vía las medidas de resumen (quartiles, media, etc) de la data antes y después de la imputación. </strong></p>
+<p><strong> Se recomienda hacer el tratamiento de datos atípicos <strong>antes</strong> de datos perdidos, para evitar imputaciones sesgadas. Esto porque la imputación a realizar para los datos vacíos puede verse afectada por los valores atípicos, por ejemplo, imputar por la media. </strong></p>
+<p>No siempre usamos los mismos límites para determinar a los datos atípicos; estos pueden cambiar dependiendo del problema particular. Por ejemplo, considerando 1 o 2 en vez del valor que multiplica al rango intercuartil en la fórmula para los límites superior e inferior.</p>
 </section>
+<section id="imputación-de-vacíos" class="level2">
+<h2 class="anchored" data-anchor-id="imputación-de-vacíos">Imputación de vacíos</h2>
+<p>No hay margen específico de cuándo excluir a los vacíos. Los umbrales suelen variar dependiendo del contexto.</p>
+<p>Imputar más del 30% de los vacíos no es tan recomendable, pero podría cambiar en contextos bien particulares.</p>
+<p>El <strong>identificador (id)</strong> no se puede imputar.</p>
+<p>Para modelos donde se aceptan menos errores (sector salud o monetario), recomendable imputar para a lo más 20% de la data. En caso se acepten más errores para el modelo, es aceptable imputar a lo más el 30% de los datos.</p>
+<p>Si nuestro modelo puede aceptar más errores, podemos imputar más vacíos.</p>
+<p><strong>La imputación debe ser lo más real posible</strong>.</p>
+<p>Es posible que, en contextos particulares, vacíos representen un valor (0, por ejemplo). En tal situación, lo correcto sería imputar los vacíos vía 0, incluso si se tenía 75% de vacíos para la variable analizada.</p>
+<p><strong>Las decisiones de imputación deben ser consultadas con los expertos del negocio.</strong></p>
+
+
+
 </section>
 </main> <!-- /main -->
 <script>
@@ -440,13 +326,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation column-body">
   <div class="nav-page nav-page-previous">
-      <a href="./semana-02.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Semana 03/28</span>
+      <a href="./semana-05.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Semana</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./laboratorio-01.html" class="pagination-link">
-        <span class="nav-page-text">Laboratorio 01</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./semana-03.html" class="pagination-link">
+        <span class="nav-page-text">Semana 04/04</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
